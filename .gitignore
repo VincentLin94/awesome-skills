@@ -1,0 +1,46 @@
+# Local agent/runtime state
+.trae/
+.claude/
+
+# Operating system and editor noise
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node dependencies and package-manager caches
+node_modules/
+.npm/
+.pnpm-store/
+.yarn/
+
+# Logs, reports, and coverage
+*.log
+coverage/
+reports/
+*.lcov
+
+# Local configuration and secrets
+.env
+.env.*
+*.local
+*.config
+internal/
+
+# Local archives and generated task artifacts
+output/*
+!output/.gitkeep
+outputs/
+work/
+tmp/
+temp/
+*.tmp
