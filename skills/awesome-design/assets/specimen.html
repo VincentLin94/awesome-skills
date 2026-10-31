@@ -64,6 +64,27 @@
     .swatch code { font-family: var(--ad-font-mono); font-size: 11px; margin-left: auto; color: var(--ad-muted); }
     .settings-note { border-top: 1px solid var(--ad-rule); padding-top: 18px; margin: 18px 0 0; font-size: 13px; color: var(--ad-body); }
     .workbench { margin-top: 40px; }
+    .flow-sample { margin-top: 40px; }
+    .flow-sequence { display: grid; grid-template-columns: minmax(0,1fr) 80px minmax(0,1fr) 80px minmax(0,1fr); align-items: start; }
+    .flow-card { border: 1px solid var(--ad-control-border); border-radius: var(--ad-radius-panel); background: var(--ad-surface); }
+    .flow-card summary { min-height: 96px; padding: 18px 20px; display: flex; align-items: center; gap: 12px; cursor: pointer; list-style: none; }
+    .flow-card summary::-webkit-details-marker { display: none; }
+    .flow-card summary:focus-visible { outline: 2px solid var(--ad-focus); outline-offset: 3px; }
+    .flow-card .flow-number { font-size: 12px; color: var(--ad-muted); }
+    .flow-card .flow-name { font-size: 18px; font-weight: 600; }
+    .flow-card .flow-expander { margin-left: auto; width: 18px; height: 18px; position: relative; flex: none; color: var(--ad-muted); }
+    .flow-card .flow-expander::before, .flow-card .flow-expander::after { content: ""; position: absolute; background: currentColor; }
+    .flow-card .flow-expander::before { width: 12px; height: 1px; top: 8px; left: 3px; }
+    .flow-card .flow-expander::after { height: 12px; width: 1px; left: 8px; top: 3px; }
+    .flow-card[open] .flow-expander::after { display: none; }
+    .flow-card[open] { border-color: var(--ad-ink); }
+    .flow-card dl { margin: 0; padding: 0 20px 20px; font-size: 13px; }
+    .flow-card dt { color: var(--ad-muted); margin: 10px 0 3px; }
+    .flow-card dd { margin: 0; color: var(--ad-body); }
+    .flow-connector { position: relative; height: 96px; }
+    .flow-connector::before { content: ""; position: absolute; top: 48px; left: 0; right: 1px; border-top: 1px solid var(--ad-control-border); }
+    .flow-connector::after { content: ""; position: absolute; top: 45px; right: 1px; width: 6px; height: 6px; border-top: 1px solid var(--ad-control-border); border-right: 1px solid var(--ad-control-border); transform: rotate(45deg); }
+    .flow-connector span { position: absolute; top: 60px; left: 0; right: 0; text-align: center; font-size: 11px; color: var(--ad-muted); }
     .section-title { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: 18px; }
     .section-title h2 { font-size: 24px; margin: 0 0 4px; }
     .section-title p { font-size: 14px; margin: 0; color: var(--ad-muted); }
@@ -103,6 +124,13 @@
     @media (max-width: 900px) { .shell { padding-inline: 24px; } .lab { grid-template-columns: minmax(0,1fr) 238px; gap: 16px; } .settings { padding: 20px; } .board { padding: 28px 24px 22px; } .workspace-body { grid-template-columns: minmax(0,1fr) 280px; } }
     @media (max-width: 720px) { .shell { padding: 0 16px 32px; } .topbar { min-height: 74px; } .topbar p { display: none; } .intro { padding-block: 28px 24px; } .intro > .small-note { display: none; } .lab { grid-template-columns: 1fr; } .settings { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; } .settings h2 { grid-column: 1/-1; margin: 0; } .settings fieldset { margin: 0; } .palette { grid-column: 1; border: 0; padding-top: 8px; } .settings-note { border: 0; margin: 0; padding-top: 8px; } .workspace-body { grid-template-columns: 1fr; } .detail { border-left: 0; border-top: 1px solid var(--ad-rule); } .toolbar { padding: 16px; gap: 10px; } .count { margin: 0; align-self: center; } .item { padding: 16px 16px 16px 13px; } .item-tag { display: none; } .section-title { align-items: start; } .board { padding: 26px 20px 20px; } .comparison { gap: 12px; } figcaption { font-size: 14px; } figcaption small { font-size: 12px; } }
     @media (max-width: 720px) { .search-field { flex-basis: 100%; } .section-title > .small-note { display: none; } }
+    @media (max-width: 720px) {
+      .flow-sequence { grid-template-columns: 1fr; }
+      .flow-connector { height: 48px; }
+      .flow-connector::before { top: 0; bottom: 1px; left: 50%; right: auto; border-top: 0; border-left: 1px solid var(--ad-control-border); }
+      .flow-connector::after { top: auto; bottom: 1px; left: calc(50% - 3px); right: auto; border-top: 0; border-bottom: 1px solid var(--ad-control-border); }
+      .flow-connector span { top: 15px; left: calc(50% + 12px); right: auto; white-space: nowrap; }
+    }
     @media (max-width: 390px) { .settings { grid-template-columns: 1fr; } .settings h2 { grid-column: 1; } .comparison { grid-template-columns: 1fr; gap: 24px; } .network { max-width: 230px; } }
   </style>
 </head>
@@ -120,7 +148,7 @@
       </div>
       <div class="lab">
         <section class="board ad-paper" aria-labelledby="board-title">
-          <header class="board-head"><h2 id="board-title" class="ad-display">从全局，看到重点</h2><p>保持位置与尺度，用一条路径解释变化。</p></header>
+          <header class="board-head"><h2 id="board-title" class="ad-display">路径聚焦</h2></header>
           <div class="legend"><span><i class="line-key" aria-hidden="true"></i>可选关系</span><span><i class="line-key active" aria-hidden="true"></i>当前路径</span></div>
           <div class="comparison">
             <figure><svg class="network" viewBox="0 0 280 230" role="img" aria-label="总览：五个节点及全部可选关系。"><g class="edge"><path d="M140 28 246 103 206 203 74 203 34 103Z M140 28 74 203 246 103 34 103 206 203Z"/></g><g><circle cx="140" cy="28" r="18"/><circle cx="246" cy="103" r="18"/><circle cx="206" cy="203" r="18"/><circle cx="74" cy="203" r="18"/><circle cx="34" cy="103" r="18"/></g><g><text x="140" y="28">A</text><text x="246" y="103">B</text><text x="206" y="203">C</text><text x="74" y="203">D</text><text x="34" y="103">E</text></g></svg><figcaption>完整上下文<small>位置稳定，关系可追溯</small></figcaption></figure>
@@ -132,9 +160,28 @@
           <fieldset><legend>表面</legend><div class="themes"><button class="ad-button" data-theme="paper" aria-pressed="true">暖纸</button><button class="ad-button" data-theme="neutral" aria-pressed="false">中性</button><button class="ad-button" data-theme="dark" aria-pressed="false">深色</button></div></fieldset>
           <fieldset><div class="range-label"><label for="grain">纤维强度</label><output id="grain-value" for="grain">16%</output></div><input type="range" id="grain" min="0" max="24" value="16" step="1"><p class="range-help" id="grain-help">只改变图解和预览背景。</p></fieldset>
           <div class="palette"><div class="swatch"><i style="background:var(--ad-surface)" aria-hidden="true"></i>表面<code data-token="surface">#FBF8F1</code></div><div class="swatch"><i style="background:var(--ad-ink)" aria-hidden="true"></i>墨色<code data-token="ink">#1E1C19</code></div><div class="swatch"><i style="background:var(--ad-accent)" aria-hidden="true"></i>强调<code data-token="accent">#CF4436</code></div><div class="swatch"><i style="background:var(--ad-rule)" aria-hidden="true"></i>分隔<code data-token="rule">#D8D0C1</code></div></div>
-          <p class="settings-note">展示标题保留宋体的笔锋。操作与说明使用无衬线，保持清楚、稳定。</p>
+          <details class="settings-note"><summary>字体说明</summary><p>宋体承担展示标题，无衬线承担操作与说明。</p></details>
         </aside>
       </div>
+      <section class="flow-sample" aria-labelledby="flow-title">
+        <div class="section-title"><div><h2 id="flow-title">交接与展开</h2><p>点击节点查看规则。</p></div></div>
+        <div class="flow-sequence">
+          <details class="flow-card" id="flow-discover">
+            <summary><span class="flow-number">01</span><span class="flow-name">需求确认</span><span class="flow-expander" aria-hidden="true"></span></summary>
+            <dl><dt>确认什么</dt><dd>用户问题、适用范围与验收结果。</dd><dt>放行条件</dt><dd>问题与范围明确；未决事项已列出。</dd></dl>
+          </details>
+          <div class="flow-connector" aria-label="需求记录交给方案设计"><span>需求记录</span></div>
+          <details class="flow-card" id="flow-design">
+            <summary><span class="flow-number">02</span><span class="flow-name">方案设计</span><span class="flow-expander" aria-hidden="true"></span></summary>
+            <dl><dt>设计什么</dt><dd>完成路径、关键取舍与验证方式。</dd><dt>放行条件</dt><dd>方案可执行，能对应需求验收。</dd></dl>
+          </details>
+          <div class="flow-connector" aria-label="设计方案交给交付验证"><span>设计方案</span></div>
+          <details class="flow-card" id="flow-deliver">
+            <summary><span class="flow-number">03</span><span class="flow-name">交付验证</span><span class="flow-expander" aria-hidden="true"></span></summary>
+            <dl><dt>验证什么</dt><dd>按实际使用路径检查结果与证据。</dd><dt>完成条件</dt><dd>可用结果已交付，验证范围明确。</dd></dl>
+          </details>
+        </div>
+      </section>
       <section class="workbench" aria-labelledby="library-title">
         <div class="section-title"><div><h2 id="library-title">设计素材</h2><p>同一种视觉语言，进入日常工作界面。</p></div><span class="small-note">本地示例数据</span></div>
         <div class="workspace">
@@ -143,7 +190,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer"><span>原创交互样本 · 无需网络或外部字体</span><a href="./web-lab/">打开材质与动效实验室</a><span>布局按窄屏重排 · 支持键盘与减少动效</span></footer>
+    <footer class="footer"><span>Awesome Design · 交互样本</span><a href="./web-lab/">材质与动效实验室</a></footer>
   </div>
   <script>
     'use strict';
