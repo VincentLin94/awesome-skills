@@ -13,14 +13,44 @@
         "interaction",
         "threejs"
       ],
-      "version": "1.0.0",
+      "version": "1.1.0",
       "created_at": "2026-10-30",
+      "updated_at": "2026-10-31",
+      "changelog": [
+        {
+          "version": "1.1.0",
+          "date": "2026-10-31",
+          "changes": "补充画布与页面的双指手势约定：捏合缩放、双指滑动平移；说明触控板 wheel 与触屏多指映射、缩放锚点和实际设备验收。"
+        },
+        {
+          "version": "1.0.0",
+          "date": "2026-10-31",
+          "changes": "发布统一的暖纸与克制交互设计语言；提供 Web、工作台、动效及 Three.js 方法与可运行样本；整理公开来源与按需依赖。"
+        }
+      ]
+    },
+    {
+      "name": "awesome-writing",
+      "path": "skills/awesome-writing",
+      "author": "VincentLin94",
+      "description": "技术写作教练与结构编辑：帮助 Agent 学习用户风格基准，撰写、审阅、重组和润色技术文档、方案、PRD、复盘、教程与工程博客，让读者以更低认知成本获得有效信息并获得良好阅读体验。Invoke when 用户明确要求编写、修改、审阅或润色文档、文章、方案、报告、PRD、技术设计、博客，或要求对齐写作风格、选择图文载体。不用于日常对话、代码注释、commit message、即时消息。",
+      "tags": [
+        "writing",
+        "documentation",
+        "technical-writing",
+        "review",
+        "restructuring",
+        "visualization",
+        "feishu"
+      ],
+      "version": "1.0.0",
+      "created_at": "2026-10-31",
       "updated_at": "2026-10-31",
       "changelog": [
         {
           "version": "1.0.0",
           "date": "2026-10-31",
-          "changes": "发布统一的暖纸与克制交互设计语言；提供 Web、工作台、动效及 Three.js 方法与可运行样本；整理公开来源与按需依赖。"
+          "changes": "从作者维护的 talent_skill_set 主分支原样同步技术写作技能，包含 SKILL.md、anti-patterns.md 与 rich-media-playbook.md。"
         }
       ]
     }
