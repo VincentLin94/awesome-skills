@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Awesome Design · 视觉与交互样本</title>
+  <link rel="stylesheet" href="./tokens.css">
+  <style>
+    html { font-size: 16px; }
+    body { margin: 0; line-height: 1.6; }
+    button, input, select { -webkit-tap-highlight-color: transparent; }
+    a { color: inherit; text-underline-offset: .2em; }
+    .skip { position: absolute; left: 16px; top: -90px; z-index: 3; background: var(--ad-surface); padding: 12px; }
+    .skip:focus { top: 8px; }
+    .shell { max-width: 1264px; margin-inline: auto; padding: 0 40px 64px; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 92px; border-bottom: 1px solid var(--ad-rule); }
+    .brand { display: flex; align-items: center; gap: 12px; font-size: 17px; font-weight: 650; }
+    .brand svg { width: 30px; height: 30px; }
+    .topbar p { font-size: 13px; margin: 0; color: var(--ad-muted); }
+    .intro { display: flex; align-items: end; justify-content: space-between; gap: 30px; padding-block: 42px 32px; }
+    h1 { font-size: clamp(28px,3vw,40px); margin: 0 0 10px; }
+    .intro p { margin: 0; max-width: 600px; color: var(--ad-body); }
+    .small-note { font-size: 13px; color: var(--ad-muted); }
+    .lab { display: grid; grid-template-columns: minmax(0,1fr) 276px; gap: 24px; align-items: stretch; }
+    .board { border: 1px solid var(--ad-rule); border-radius: var(--ad-radius-panel); padding: 32px 36px 24px; min-width: 0; }
+    .board-head { text-align: center; padding-bottom: 20px; border-bottom: 1px solid var(--ad-rule); }
+    .board-head h2 { font-size: clamp(26px,2.6vw,34px); margin: 0 0 8px; }
+    .board-head p { margin: 0; color: var(--ad-body); font-size: 15px; }
+    .legend { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 20px; font-size: 13px; color: var(--ad-body); }
+    .legend span { display: flex; align-items: center; gap: 8px; }
+    .line-key { width: 28px; border-top: 2px dashed var(--ad-control-border); }
+    .line-key.active { border-top: 3px solid var(--ad-accent); }
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding-block: 16px 22px; }
+    figure { margin: 0; min-width: 0; }
+    .network { width: 100%; max-width: 300px; display: block; margin: auto; overflow: visible; }
+    .network .edge { stroke: var(--ad-control-border); stroke-width: 1.8; stroke-dasharray: 5 6; fill: none; }
+    .network .path { stroke: var(--ad-accent); stroke-width: 3; fill: none; opacity: 0; transition: opacity var(--ad-panel) var(--ad-ease); }
+    .network circle { fill: var(--ad-surface); stroke: var(--ad-ink); stroke-width: 2; }
+    .network text { fill: var(--ad-ink); font-family: var(--ad-font-ui); font-size: 16px; text-anchor: middle; dominant-baseline: central; }
+    .network .area { fill: var(--ad-accent-soft); opacity: 0; transition: opacity var(--ad-panel) var(--ad-ease); }
+    #selected-network[data-step="1"] .path, #selected-network[data-step="2"] .path, #selected-network[data-step="2"] .area { opacity: 1; }
+    #selected-network[data-step="2"] .selected { stroke: var(--ad-accent-text); stroke-width: 3; }
+    figcaption { text-align: center; font-size: 16px; font-weight: 600; margin-top: 10px; }
+    figcaption small { display: block; font-size: 13px; font-weight: 400; color: var(--ad-muted); margin-top: 4px; }
+    .accent { color: var(--ad-accent-text); }
+    .conclusion { border-top: 1px solid var(--ad-rule); padding-top: 20px; text-align: center; }
+    .conclusion p { margin: 0; min-height: 26px; font-size: 15px; }
+    .transport { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .transport .ad-button { font-size: 13px; padding: .5rem .85rem; }
+    .step-label { min-width: 52px; font-size: 13px; color: var(--ad-muted); font-variant-numeric: tabular-nums; }
+    .settings { padding: 24px; background: var(--ad-surface); border: 1px solid var(--ad-rule); border-radius: var(--ad-radius-panel); }
+    .settings h2 { margin: 0 0 22px; font-size: 18px; font-weight: 600; }
+    fieldset { margin: 0 0 24px; padding: 0; border: 0; min-width: 0; }
+    legend { font-size: 13px; color: var(--ad-muted); margin-bottom: 10px; padding: 0; }
+    .themes { display: flex; flex-wrap: wrap; gap: 6px; }
+    .themes .ad-button { font-size: 13px; flex: 1; padding: .5rem; }
+    .range-label { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--ad-muted); }
+    #grain { accent-color: var(--ad-ink); width: 100%; height: 44px; margin: 2px 0 0; cursor: pointer; }
+    .range-help { margin: 0; font-size: 12px; color: var(--ad-muted); }
+    .palette { border-top: 1px solid var(--ad-rule); padding-top: 20px; }
+    .swatch { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 13px; }
+    .swatch i { width: 25px; height: 25px; border: 1px solid var(--ad-rule); border-radius: 50%; flex-shrink: 0; }
+    .swatch code { font-family: var(--ad-font-mono); font-size: 11px; margin-left: auto; color: var(--ad-muted); }
+    .settings-note { border-top: 1px solid var(--ad-rule); padding-top: 18px; margin: 18px 0 0; font-size: 13px; color: var(--ad-body); }
+    .workbench { margin-top: 40px; }
+    .section-title { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: 18px; }
+    .section-title h2 { font-size: 24px; margin: 0 0 4px; }
+    .section-title p { font-size: 14px; margin: 0; color: var(--ad-muted); }
+    .workspace { border: 1px solid var(--ad-rule); border-radius: var(--ad-radius-panel); background: var(--ad-surface); overflow: hidden; }
+    .toolbar { display: flex; gap: 16px; padding: 18px 24px; align-items: end; border-bottom: 1px solid var(--ad-rule); flex-wrap: wrap; }
+    .field { display: grid; gap: 5px; }
+    .field label { color: var(--ad-body); font-size: 13px; }
+    .field input, .field select { border: 1px solid var(--ad-control-border); border-radius: 6px; background: var(--ad-raised); color: var(--ad-ink); min-height: 44px; padding: 8px 12px; max-width: 100%; }
+    .search-field { flex: 1; min-width: 180px; }
+    .search-field input { width: 100%; min-width: 0; }
+    input::placeholder { color: var(--ad-muted); opacity: 1; }
+    .count { font-size: 13px; color: var(--ad-muted); margin: 0 0 10px auto; }
+    .workspace-body { display: grid; grid-template-columns: minmax(0,1fr) 340px; }
+    .items { list-style: none; margin: 0; padding: 0; }
+    .items li + li { border-top: 1px solid var(--ad-rule); }
+    .item { width: 100%; border: 0; border-left: 3px solid transparent; color: var(--ad-ink); background: transparent; cursor: pointer; padding: 18px 24px 18px 21px; display: flex; align-items: center; gap: 16px; text-align: left; min-height: 90px; }
+    .item:hover { background: var(--ad-raised); }
+    .item[aria-pressed="true"] { border-left-color: var(--ad-accent-text); background: var(--ad-accent-soft); }
+    .item[aria-pressed="true"] .meta { color: var(--ad-body); }
+    .item:focus-visible { outline-offset: -4px; }
+    .thumb { width: 54px; height: 46px; flex-shrink: 0; border: 1px solid var(--ad-rule); border-radius: 6px; background: var(--ad-surface); display: grid; place-items: center; }
+    .thumb svg { width: 38px; height: 32px; }
+    .item-title { display: block; font-weight: 600; font-size: 15px; }
+    .meta { display: block; color: var(--ad-muted); font-size: 13px; margin-top: 3px; }
+    .item-tag { margin-left: auto; white-space: nowrap; color: var(--ad-body); font-size: 12px; }
+    .detail { border-left: 1px solid var(--ad-rule); padding: 24px; }
+    .preview { min-height: 150px; display: grid; place-items: center; border: 1px solid var(--ad-rule); border-radius: 8px; }
+    .preview svg { width: 140px; height: 100px; }
+    .detail h3 { font-size: 19px; margin: 20px 0 8px; }
+    .detail p { color: var(--ad-body); font-size: 14px; margin: 0 0 18px; }
+    .detail .ad-button { font-size: 13px; width: 100%; }
+    .empty { padding: 38px 24px; text-align: center; }
+    .empty h3 { font-size: 17px; margin: 0 0 8px; }
+    .empty p { color: var(--ad-muted); font-size: 14px; }
+    [hidden] { display: none !important; }
+    .footer { margin-top: 28px; border-top: 1px solid var(--ad-rule); padding-top: 18px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; color: var(--ad-muted); font-size: 12px; }
+    @media (max-width: 900px) { .shell { padding-inline: 24px; } .lab { grid-template-columns: minmax(0,1fr) 238px; gap: 16px; } .settings { padding: 20px; } .board { padding: 28px 24px 22px; } .workspace-body { grid-template-columns: minmax(0,1fr) 280px; } }
+    @media (max-width: 720px) { .shell { padding: 0 16px 32px; } .topbar { min-height: 74px; } .topbar p { display: none; } .intro { padding-block: 28px 24px; } .intro > .small-note { display: none; } .lab { grid-template-columns: 1fr; } .settings { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; } .settings h2 { grid-column: 1/-1; margin: 0; } .settings fieldset { margin: 0; } .palette { grid-column: 1; border: 0; padding-top: 8px; } .settings-note { border: 0; margin: 0; padding-top: 8px; } .workspace-body { grid-template-columns: 1fr; } .detail { border-left: 0; border-top: 1px solid var(--ad-rule); } .toolbar { padding: 16px; gap: 10px; } .count { margin: 0; align-self: center; } .item { padding: 16px 16px 16px 13px; } .item-tag { display: none; } .section-title { align-items: start; } .board { padding: 26px 20px 20px; } .comparison { gap: 12px; } figcaption { font-size: 14px; } figcaption small { font-size: 12px; } }
+    @media (max-width: 720px) { .search-field { flex-basis: 100%; } .section-title > .small-note { display: none; } }
+    @media (max-width: 390px) { .settings { grid-template-columns: 1fr; } .settings h2 { grid-column: 1; } .comparison { grid-template-columns: 1fr; gap: 24px; } .network { max-width: 230px; } }
+  </style>
+</head>
+<body class="awesome-design" data-ad-theme="paper">
+  <a class="skip" href="#main">跳转到内容</a>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 22 15 5 25 22Z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="15" cy="5" r="3" fill="currentColor"/><circle cx="5" cy="22" r="3" fill="currentColor"/><circle cx="25" cy="22" r="3" fill="var(--ad-accent)"/></svg>Awesome Design</div>
+      <p>个人设计语言 · 可交互样本</p>
+    </header>
+    <main id="main">
+      <div class="intro">
+        <div><h1 class="ad-display">温润的表面，清晰的结构</h1><p>让材质留在背景，让字体、留白与细微的变化组织信息。</p></div>
+        <span class="small-note">暖纸 · 墨色 · 朱红</span>
+      </div>
+      <div class="lab">
+        <section class="board ad-paper" aria-labelledby="board-title">
+          <header class="board-head"><h2 id="board-title" class="ad-display">从全局，看到重点</h2><p>保持位置与尺度，用一条路径解释变化。</p></header>
+          <div class="legend"><span><i class="line-key" aria-hidden="true"></i>可选关系</span><span><i class="line-key active" aria-hidden="true"></i>当前路径</span></div>
+          <div class="comparison">
+            <figure><svg class="network" viewBox="0 0 280 230" role="img" aria-label="总览：五个节点及全部可选关系。"><g class="edge"><path d="M140 28 246 103 206 203 74 203 34 103Z M140 28 74 203 246 103 34 103 206 203Z"/></g><g><circle cx="140" cy="28" r="18"/><circle cx="246" cy="103" r="18"/><circle cx="206" cy="203" r="18"/><circle cx="74" cy="203" r="18"/><circle cx="34" cy="103" r="18"/></g><g><text x="140" y="28">A</text><text x="246" y="103">B</text><text x="206" y="203">C</text><text x="74" y="203">D</text><text x="34" y="103">E</text></g></svg><figcaption>完整上下文<small>位置稳定，关系可追溯</small></figcaption></figure>
+            <figure><svg id="selected-network" data-step="1" class="network" viewBox="0 0 280 230" role="img" aria-label="当前路径：A 到 B，再到 C。"><path class="area" d="M140 28 246 103 206 203Z"/><g class="edge"><path d="M140 28 246 103 206 203 74 203 34 103Z M140 28 74 203 246 103 34 103 206 203Z"/></g><path class="path" d="M140 28 246 103 206 203"/><g><circle class="selected" cx="140" cy="28" r="18"/><circle class="selected" cx="246" cy="103" r="18"/><circle class="selected" cx="206" cy="203" r="18"/><circle cx="74" cy="203" r="18"/><circle cx="34" cy="103" r="18"/></g><g><text x="140" y="28">A</text><text x="246" y="103">B</text><text x="206" y="203">C</text><text x="74" y="203">D</text><text x="34" y="103">E</text></g></svg><figcaption class="accent" id="diagram-caption">只强调当前路径<small id="diagram-sub">A → B → C，其他关系仍然可见</small></figcaption></figure>
+          </div>
+          <div class="conclusion"><p id="step-description" aria-live="polite">选择关系后，颜色与实线共同标记路径。</p><div class="transport"><button class="ad-button" id="previous">上一步</button><span class="step-label" id="step-label">2 / 3</span><button class="ad-button" id="next">下一步</button><button class="ad-button" id="play" aria-pressed="false">播放演示</button></div></div>
+        </section>
+        <aside class="settings" aria-labelledby="settings-title"><h2 id="settings-title">调整视觉</h2>
+          <fieldset><legend>表面</legend><div class="themes"><button class="ad-button" data-theme="paper" aria-pressed="true">暖纸</button><button class="ad-button" data-theme="neutral" aria-pressed="false">中性</button><button class="ad-button" data-theme="dark" aria-pressed="false">深色</button></div></fieldset>
+          <fieldset><div class="range-label"><label for="grain">纤维强度</label><output id="grain-value" for="grain">16%</output></div><input type="range" id="grain" min="0" max="24" value="16" step="1"><p class="range-help" id="grain-help">只改变图解和预览背景。</p></fieldset>
+          <div class="palette"><div class="swatch"><i style="background:var(--ad-surface)" aria-hidden="true"></i>表面<code data-token="surface">#FBF8F1</code></div><div class="swatch"><i style="background:var(--ad-ink)" aria-hidden="true"></i>墨色<code data-token="ink">#1E1C19</code></div><div class="swatch"><i style="background:var(--ad-accent)" aria-hidden="true"></i>强调<code data-token="accent">#CF4436</code></div><div class="swatch"><i style="background:var(--ad-rule)" aria-hidden="true"></i>分隔<code data-token="rule">#D8D0C1</code></div></div>
+          <p class="settings-note">展示标题保留宋体的笔锋。操作与说明使用无衬线，保持清楚、稳定。</p>
+        </aside>
+      </div>
+      <section class="workbench" aria-labelledby="library-title">
+        <div class="section-title"><div><h2 id="library-title">设计素材</h2><p>同一种视觉语言，进入日常工作界面。</p></div><span class="small-note">本地示例数据</span></div>
+        <div class="workspace">
+          <div class="toolbar"><div class="field search-field"><label for="search">搜索素材</label><input id="search" type="search" placeholder="按名称或用途搜索" autocomplete="off"></div><div class="field"><label for="category">类型</label><select id="category"><option value="all">全部类型</option><option value="材质">材质</option><option value="结构">结构</option><option value="组件">组件</option></select></div><p class="count" id="count" aria-live="polite">4 项素材</p></div>
+          <div class="workspace-body"><div><ul id="items" class="items" aria-label="素材列表"></ul><div id="empty" class="empty" hidden><h3>没有找到匹配的素材</h3><p>试试更短的关键词，或清除筛选。</p><button class="ad-button" id="clear">清除筛选</button></div></div><aside id="detail" class="detail" aria-label="素材详情"><div id="preview" class="preview ad-paper" aria-hidden="true"></div><h3 id="detail-title">暖白纤维</h3><p id="detail-description"></p><button id="favorite" class="ad-button" aria-pressed="false">加入收藏</button><p class="small-note" id="favorite-status" aria-live="polite" style="margin:12px 0 0">收藏仅保留在本次预览中。</p></aside></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span>原创交互样本 · 无需网络或外部字体</span><a href="./web-lab/">打开材质与动效实验室</a><span>布局按窄屏重排 · 支持键盘与减少动效</span></footer>
+  </div>
+  <script>
+    'use strict';
+    const $ = id => document.getElementById(id);
+    const themeButtons = [...document.querySelectorAll('[data-theme]')];
+    const colors = {paper:['#FBF8F1','#1E1C19','#CF4436','#D8D0C1'],neutral:['#FFFFFF','#171717','#315F9B','#DEDEDE'],dark:['#282520','#F3EFE6','#F19A8F','#514C44']};
+    let texture = 16;
+    themeButtons.forEach(button => button.addEventListener('click', () => {
+      const theme = button.dataset.theme;
+      document.body.dataset.adTheme = theme;
+      themeButtons.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+      $('grain').disabled = theme !== 'paper';
+      document.body.style.setProperty('--ad-texture-opacity', theme === 'paper' ? texture / 100 : 0);
+      $('grain-value').value = theme === 'paper' ? texture + '%' : '关闭';
+      $('grain-help').textContent = theme === 'paper' ? '只改变图解和预览背景。' : '切回暖纸后可调整纤维强度。';
+      document.querySelectorAll('[data-token]').forEach((e,i) => e.textContent = colors[theme][i]);
+    }));
+    $('grain').addEventListener('input', e => { texture = Number(e.target.value); document.body.style.setProperty('--ad-texture-opacity', texture / 100); $('grain-value').value = texture + '%'; });
+    const stages = [
+      ['保留完整关系','所有关系使用同一套编码','先观察全局，不改变节点的位置。','总览：五个节点及全部可选关系。'],
+      ['只强调当前路径','A → B → C，其他关系仍然可见','选择关系后，颜色与实线共同标记路径。','当前路径：A 到 B，再到 C。'],
+      ['形成清楚的分组','选中 A、B、C，描边与浅底共同确认','选中结果保留在原位，回看上下文无需重新定位。','选中分组：A、B、C，使用强轮廓和浅色区域表示。']
+    ];
+    let stage = 1, timer = null;
+    function renderStage() { const s=stages[stage]; $('selected-network').dataset.step=stage; $('selected-network').setAttribute('aria-label',s[3]); $('diagram-caption').firstChild.textContent=s[0]; $('diagram-sub').textContent=s[1]; $('step-description').textContent=s[2]; $('step-label').textContent=(stage+1)+' / 3'; $('previous').disabled=stage===0; $('next').disabled=stage===2; }
+    function stop() { clearInterval(timer); timer=null; $('play').textContent='播放演示'; $('play').setAttribute('aria-pressed','false'); }
+    $('previous').addEventListener('click',()=>{ stop(); stage=Math.max(0,stage-1); renderStage(); });
+    $('next').addEventListener('click',()=>{ stop(); stage=Math.min(2,stage+1); renderStage(); });
+    $('play').addEventListener('click',()=>{ if(timer) {stop();return;} stage=0;renderStage();$('play').textContent='暂停演示';$('play').setAttribute('aria-pressed','true');timer=setInterval(()=>{stage++;renderStage();if(stage===2)stop();},1700); });
+    document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
+    renderStage();
+    const motifs = {
+      material:'<path d="M14 18H92V82H14Z" fill="var(--ad-canvas)" stroke="var(--ad-control-border)"/><path d="M24 34 80 31M24 49 80 45M24 64 80 60" stroke="var(--ad-control-border)" stroke-width="1.4"/>',
+      structure:'<path d="M15 15H85V85H15ZM50 15V85M15 52H85" fill="none" stroke="var(--ad-ink)" stroke-width="2"/><path d="M61 65H75" stroke="var(--ad-accent)" stroke-width="4"/>',
+      relation:'<path d="M15 70 50 24 85 70M15 70H85" fill="none" stroke="var(--ad-control-border)" stroke-width="2"/><path d="M15 70 50 24" stroke="var(--ad-accent)" stroke-width="3"/><g fill="var(--ad-surface)" stroke="var(--ad-ink)" stroke-width="2"><circle cx="15" cy="70" r="8"/><circle cx="50" cy="24" r="8"/><circle cx="85" cy="70" r="8"/></g>',
+      component:'<rect x="12" y="28" width="76" height="44" rx="8" fill="var(--ad-primary)"/><path d="M38 50 47 58 64 41" stroke="var(--ad-on-primary)" stroke-width="3" fill="none"/>'
+    };
+    const entries = [
+      {id:'paper',name:'暖白纤维',type:'材质',tag:'阅读与图解',motif:'material',description:'细颗粒与短纤维保留轻微触感。文字和控件位于清晰的实体层，适合阅读画布与图解背景。'},
+      {id:'grid',name:'对齐与留白',type:'结构',tag:'列表与工作台',motif:'structure',description:'先建立共同边缘与稳定间距，让相近的信息自然成组。高频列表保持紧凑，减少反复出现的容器边框。'},
+      {id:'relation',name:'关系与重点',type:'结构',tag:'比较与流程',motif:'relation',description:'节点位置保持一致。颜色、实线与文字共同指向当前关系，其他信息仍可供回看。'},
+      {id:'button',name:'清楚的操作反馈',type:'组件',tag:'选中与完成',motif:'component',description:'操作即时响应，选中状态保持稳定。变化同时有文字与视觉提示，键盘焦点清楚可见。'}
+    ];
+    const favorites = new Set(); let selected='paper';
+    function icon(motif) { return '<svg viewBox="0 0 100 100" aria-hidden="true">'+motifs[motif]+'</svg>'; }
+    function renderDetail() { const e=entries.find(e=>e.id===selected); $('detail').hidden=!e; if(!e)return; $('preview').innerHTML=icon(e.motif);$('detail-title').textContent=e.name;$('detail-description').textContent=e.description;const saved=favorites.has(selected);$('favorite').textContent=saved?'已收藏 · 取消收藏':'加入收藏';$('favorite').setAttribute('aria-pressed',String(saved)); }
+    function renderList() {
+      const q=$('search').value.trim().toLowerCase(), type=$('category').value;
+      const filtered=entries.filter(e=>(type==='all'||e.type===type)&&(e.name+e.type+e.tag).toLowerCase().includes(q));
+      if(!filtered.some(e=>e.id===selected))selected=filtered[0]?.id||null;
+      $('items').replaceChildren();
+      filtered.forEach(e=>{const li=document.createElement('li'),b=document.createElement('button');b.className='item';b.type='button';b.setAttribute('aria-pressed',String(e.id===selected));b.innerHTML='<span class="thumb">'+icon(e.motif)+'</span><span><span class="item-title">'+e.name+'</span><span class="meta">'+e.tag+'</span></span><span class="item-tag">'+e.type+'</span>';b.addEventListener('click',()=>{selected=e.id;document.querySelectorAll('.item').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderDetail();$('favorite-status').textContent='收藏仅保留在本次预览中。';});li.append(b);$('items').append(li);});
+      $('count').textContent=filtered.length+' 项素材';$('empty').hidden=filtered.length>0;renderDetail();
+    }
+    $('search').addEventListener('input',renderList);$('category').addEventListener('change',renderList);
+    $('clear').addEventListener('click',()=>{$('search').value='';$('category').value='all';renderList();$('search').focus();});
+    $('favorite').addEventListener('click',()=>{favorites.has(selected)?favorites.delete(selected):favorites.add(selected);renderDetail();$('favorite-status').textContent=favorites.has(selected)?'已加入本次预览的收藏。':'已从本次预览的收藏移除。';});
+    renderList();
+  </script>
+</body>
+</html>

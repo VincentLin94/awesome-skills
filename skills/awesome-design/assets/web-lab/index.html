@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Awesome Design · 材质与动效实验室</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="./lab.css">
+  <script type="importmap">
+    {"imports":{"three":"./node_modules/three/build/three.module.js"}}
+  </script>
+</head>
+<body class="awesome-design">
+  <a class="skip" href="#main">跳转到内容</a>
+  <div class="page">
+    <header class="masthead"><a href="../specimen.html" class="wordmark"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 22 15 5 25 22Z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="15" cy="5" r="3" fill="currentColor"/><circle cx="5" cy="22" r="3" fill="currentColor"/><circle cx="25" cy="22" r="3" fill="var(--ad-accent)"/></svg>Awesome Design</a><span>材质与动效实验室</span></header>
+    <main id="main">
+      <div class="introduction"><div><h1 class="ad-display">让质感可以被触碰</h1><p>转动一块样片，拨动一个控件。表面、光线和动作一起回应你。</p></div><button class="ad-button" id="about">查看设计细节</button></div>
+      <section class="material-layout" aria-labelledby="material-heading">
+        <div class="stage ad-paper">
+          <div class="stage-heading"><span id="material-heading">暖白纤维</span><span id="mode-label">静态预览</span></div>
+          <div id="scene-host" class="scene-host" data-renderer="static">
+            <div id="fallback" class="fallback" role="img" aria-label="暖白的柔边材质样片，带朱红标记。"><div class="slab rear"></div><div class="slab front"><i></i></div><div class="contact-shadow"></div></div>
+            <canvas id="material-canvas" aria-hidden="true"></canvas>
+          </div>
+          <div class="stage-tools glass-tools" aria-label="视角控制"><button class="icon-button" id="rotate-left" aria-label="向左转动样片"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5 3 11l6 6M3 11h11a6 6 0 0 1 6 6"/></svg></button><button class="icon-button" id="reset-view">复位</button><button class="icon-button" id="rotate-right" aria-label="向右转动样片"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5 6 6-6 6m6-6H10a6 6 0 0 0-6 6"/></svg></button><span class="tool-rule"></span><button class="icon-button" id="auto-rotate" aria-pressed="false">自动转动</button></div>
+          <p id="scene-status" class="stage-caption" aria-live="polite">支持三维时可拖动查看，也可保留静态样片。</p>
+        </div>
+        <aside class="material-controls" aria-label="材质设置"><h2>观察表面</h2><p>从柔和的轮廓开始，再调整光线落在表面的方式。</p>
+          <fieldset><legend>样片颜色</legend><div class="color-options"><button data-color="#e9dfc7" data-name="暖白纤维" class="color-button" aria-label="暖白" aria-pressed="true" style="--chip:#e9dfc7"></button><button data-color="#b96450" data-name="陶土色纤维" class="color-button" aria-label="陶土" aria-pressed="false" style="--chip:#b96450"></button><button data-color="#717c6c" data-name="灰绿色纤维" class="color-button" aria-label="灰绿" aria-pressed="false" style="--chip:#717c6c"></button></div></fieldset>
+          <div class="range-field"><div><label for="roughness">表面粗糙度</label><output id="roughness-value" for="roughness">0.90</output></div><input id="roughness" type="range" min="20" max="100" value="90"><p>向右更柔和，向左更容易看到高光。</p></div>
+          <div class="view-options"><button id="static-view" class="ad-button" aria-pressed="false">静态预览</button><label class="check-row"><input id="reduce-motion" type="checkbox">减少动效</label><p id="motion-status">拖动后保留轻微惯性。</p></div>
+          <div class="material-note"><svg viewBox="0 0 120 32" aria-hidden="true"><path d="M3 26Q32 26 53 17T117 5" fill="none" stroke="var(--ad-control-border)" stroke-width="1.5"/><circle cx="70" cy="11" r="4" fill="var(--ad-accent)"/></svg><p>微纹理留在物体上。说明和操作保持清晰，背景只承托形体。</p></div>
+        </aside>
+      </section>
+      <section class="motion-section" aria-labelledby="motion-heading"><div class="motion-copy"><h2 id="motion-heading">动作延续你的意图</h2><p>拖动标记，松手后吸附。也可以连续点击不同位置，观察它从当前位置自然改变方向。</p><div class="snap-controls" aria-label="选择吸附位置"><button class="ad-button" data-stop="0" aria-pressed="false">起点</button><button class="ad-button" data-stop="1" aria-pressed="true">中点</button><button class="ad-button" data-stop="2" aria-pressed="false">终点</button></div><p class="motion-note" id="snap-status" aria-live="polite">当前选择：中点</p></div>
+        <div class="motion-demo"><div class="ruler-labels"><span>抓取</span><span>跟随</span><span>落定</span></div><div id="track" class="track"><div class="rail-line"></div><i class="stop-mark start"></i><i class="stop-mark middle"></i><i class="stop-mark end"></i><div id="puck" class="puck" role="slider" tabindex="0" aria-label="吸附位置" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="中点"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6v12M12 6v12M16 6v12"/></svg></div></div><p>可在运动途中重新抓取，也可使用方向键。</p></div>
+      </section>
+      <section class="principles" aria-label="设计原则"><div><h3>先看到内容</h3><p>一处有辨识度的主视觉，其余区域保持安静。</p></div><div><h3>再感受细节</h3><p>材质、边缘和接触阴影共同表达体积。</p></div><div><h3>始终能控制</h3><p>动效可以中断，三维可以退回静态，操作都有反馈。</p></div></section>
+    </main>
+    <footer><span>原创组件样本</span><a href="../specimen.html">查看配色与图解样本</a></footer>
+  </div>
+  <dialog id="details" aria-labelledby="dialog-title"><form method="dialog"><div class="dialog-header"><h2 id="dialog-title">设计细节</h2><button class="icon-button" aria-label="关闭设计细节" autofocus>关闭</button></div><p>主视觉采用 Three.js 绘制柔边样片，使用粗糙度、微弱凹凸纹理与柔和光照表达表面。控件保留为 HTML。</p><p>浮动工具条使用 CSS 半透明材质。下方控件以当前位置和速度计算临界阻尼弹簧，重新抓取不跳回起点。</p><p>系统或本页选择减少动效时，自动转动和释放惯性停止；直接拖动与键盘控制继续可用。</p><p class="dialog-note">这是材质与交互的原创近似，不是 Apple 原生材质的复刻。</p></form></dialog>
+  <script type="module" src="./lab.mjs"></script>
+</body>
+</html>
