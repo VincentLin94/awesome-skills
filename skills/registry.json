@@ -1,0 +1,28 @@
+{
+  "skills": [
+    {
+      "name": "awesome-design",
+      "path": "skills/awesome-design",
+      "author": "VincentLin94",
+      "description": "设计、实现与打磨 Web/GUI：从视觉参考提炼材质、排版、配色和空间组织，并用 HTML/CSS、SVG、Canvas 或 Three.js 绘制界面、图解和交互动画。用于个人设计素材库、暖纸纤维质感、克制而有表现力的网页、可中断手势与三维材质展示；明确使用 awesome-design 时也触发。纯文章摘要、文案改写、后端开发不适用。",
+      "tags": [
+        "design",
+        "web",
+        "gui",
+        "typography",
+        "interaction",
+        "threejs"
+      ],
+      "version": "1.0.0",
+      "created_at": "2026-10-30",
+      "updated_at": "2026-10-31",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-10-31",
+          "changes": "发布统一的暖纸与克制交互设计语言；提供 Web、工作台、动效及 Three.js 方法与可运行样本；整理公开来源与按需依赖。"
+        }
+      ]
+    }
+  ]
+}
