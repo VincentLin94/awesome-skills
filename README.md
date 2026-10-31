@@ -7,6 +7,7 @@
 | Skill | 用途 |
 | --- | --- |
 | [awesome-design](skills/awesome-design/SKILL.md) | 设计与打磨 Web/GUI：暖纸纤维、清晰排版、克制配色、工作台、交互动画及 Three.js 材质。 |
+| [awesome-writing](skills/awesome-writing/SKILL.md) | 撰写、审阅与重组技术文档：对齐作者风格，组织论证与证据，选择图文载体。 |
 
 `awesome-design` 保持一条统一的审美主线：温润的表面、清楚的信息层级、单一品牌强调色、稳定空间关系和有因果的微反馈。它提供可执行的设计方法、CSS token、原创纹理、二维图解与三维交互样本。
 
@@ -14,11 +15,13 @@
 
 ## 使用
 
-将所需的完整技能目录复制到你使用的 Agent 的技能目录，或让支持 GitHub Skill 安装的工具从本仓库的 `skills/awesome-design` 安装。保留目录中的 `references/`、`assets/` 等相对结构。
+将所需的完整技能目录复制到你使用的 Agent 的技能目录，或让支持 GitHub Skill 安装的工具从本仓库的 `skills/<技能名>` 安装。保留目录中的 `references/`、`assets/` 等相对结构。
 
 示例请求：
 
 > 使用 awesome-design 设计并实现当前网页。保留暖纸与清晰的信息层级，按任务需要打磨 CSS 材质、图形和可中断动效。
+
+> 使用 awesome-writing 审阅这份技术方案，先指出影响读者理解与判断的问题，再按原文事实和作者风格重组。
 
 ## 查看交互样本
 
