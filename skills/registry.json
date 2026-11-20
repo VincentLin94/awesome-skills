@@ -63,6 +63,83 @@
           "changes": "从作者维护的 talent_skill_set 主分支原样同步技术写作技能，包含 SKILL.md、anti-patterns.md 与 rich-media-playbook.md。"
         }
       ]
+    },
+    {
+      "name": "agentic-research",
+      "path": "skills/agentic-research",
+      "author": "VincentLin94",
+      "description": "工程与技术选型深度调研：并行取证、交叉验证、形成有信源的对比与落地报告。用于深度调研、技术选型、白皮书、SOP 和文章或仓库解读。",
+      "tags": ["research", "engineering", "technical-selection", "feishu"],
+      "version": "1.0.0",
+      "created_at": "2026-11-20",
+      "updated_at": "2026-11-20",
+      "changelog": [{"version": "1.0.0", "date": "2026-11-20", "changes": "首次同步作者本地 Mira 迁移版本，保留调研方法和取证矩阵脚本；宿主工具映射与能力限制见仓库 README。"}]
+    },
+    {
+      "name": "home-sweet-home",
+      "path": "skills/home-sweet-home",
+      "author": "VincentLin94",
+      "description": "将户型与装修方案做成 Three.js 可交互室内 3D 网页；用于户型可视化、全屋漫游、方案比较和材质布局调整，可选 Blender PBR 管线。",
+      "tags": ["interior-design", "threejs", "3d", "blender"],
+      "version": "1.0.0",
+      "created_at": "2026-11-20",
+      "updated_at": "2026-11-20",
+      "changelog": [{"version": "1.0.0", "date": "2026-11-20", "changes": "首次同步作者本地 Mira 迁移版本，包含原生模板、Blender 管线、参考和脚本；补充随附 Three.js r147 资源的 MIT 许可。"}]
+    },
+    {
+      "name": "html2surge",
+      "path": "skills/html2surge",
+      "author": "VincentLin94",
+      "description": "将静态 HTML 文件或目录部署到 Surge，返回公开分享链接。用于明确部署、发布或托管 HTML 的请求，不用于服务端应用。",
+      "tags": ["deployment", "static-site", "surge"],
+      "version": "1.0.0",
+      "created_at": "2026-11-20",
+      "updated_at": "2026-11-20",
+      "changelog": [{"version": "1.0.0", "date": "2026-11-20", "changes": "首次原样同步作者本地 Mira 迁移版本，保留部署脚本与账户配置说明。"}]
+    },
+    {
+      "name": "netlify-deploy",
+      "path": "skills/netlify-deploy",
+      "author": "VincentLin94",
+      "description": "将静态 HTML、单页应用或已构建前端产物部署到 Netlify，返回公开链接；用于部署、上线和分享页面，凭证由 NETLIFY_AUTH_TOKEN 提供。",
+      "tags": ["deployment", "static-site", "netlify"],
+      "version": "1.0.0",
+      "created_at": "2026-11-20",
+      "updated_at": "2026-11-20",
+      "changelog": [{"version": "1.0.0", "date": "2026-11-20", "changes": "首次同步作者本地 Mira 迁移版本；公开副本移除内置 Token，改读 NETLIFY_AUTH_TOKEN，缺少配置时提前退出，并对齐使用说明。"}]
+    },
+    {
+      "name": "pulse",
+      "path": "skills/pulse",
+      "author": "VincentLin94",
+      "description": "聚合产品发布、GitHub 趋势、新闻、播客与天气，生成中文科技简报；仅用户明确说 pulse 或 /pulse 时使用。",
+      "tags": ["briefing", "news", "github", "weather"],
+      "version": "1.0.0",
+      "created_at": "2026-11-20",
+      "updated_at": "2026-11-20",
+      "changelog": [{"version": "1.0.0", "date": "2026-11-20", "changes": "首次同步作者本地 Mira 迁移版本，排除 Python 缓存；天气 API Host 改由 QWEATHER_API_BASE 提供，说明凭证与分片失败行为，并移除固定安装路径。"}]
+    },
+    {
+      "name": "roadtrip",
+      "path": "skills/roadtrip",
+      "author": "VincentLin94",
+      "description": "调研租车自驾路线、真实旅行体验、驾驶条件与预算，制作交互 HTML 旅行攻略；用于旅行规划、路线对比和单路线细化。",
+      "tags": ["travel", "roadtrip", "research", "interactive-map"],
+      "version": "1.0.0",
+      "created_at": "2026-11-20",
+      "updated_at": "2026-11-20",
+      "changelog": [{"version": "1.0.0", "date": "2026-11-20", "changes": "首次原样同步作者本地 Mira 迁移版本，保留交互攻略规范、信源研究与资源构建脚本。"}]
+    },
+    {
+      "name": "vercel-deploy",
+      "path": "skills/vercel-deploy",
+      "author": "VincentLin94",
+      "description": "将静态 HTML、单页应用或已构建前端产物部署到 Vercel，返回公开链接；用于部署、上线和分享页面，凭证由 VERCEL_TOKEN 提供。",
+      "tags": ["deployment", "static-site", "vercel"],
+      "version": "1.0.0",
+      "created_at": "2026-11-20",
+      "updated_at": "2026-11-20",
+      "changelog": [{"version": "1.0.0", "date": "2026-11-20", "changes": "首次同步作者本地 Mira 迁移版本；公开副本移除内置 Token，改读 VERCEL_TOKEN，缺少配置时提前退出，并对齐使用说明。"}]
     }
   ]
 }

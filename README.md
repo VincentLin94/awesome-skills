@@ -8,6 +8,13 @@
 | --- | --- |
 | [awesome-design](skills/awesome-design/SKILL.md) | 设计与打磨 Web/GUI：暖纸纤维、清晰排版、克制配色、工作台、交互动画及 Three.js 材质。 |
 | [awesome-writing](skills/awesome-writing/SKILL.md) | 撰写、审阅与重组技术文档：对齐作者风格，组织论证与证据，选择图文载体。 |
+| [agentic-research](skills/agentic-research/SKILL.md) | 工程与技术选型深度调研：取证、对比、形成落地报告。 |
+| [home-sweet-home](skills/home-sweet-home/SKILL.md) | 将户型与装修方案做成可交互的 Three.js 室内 3D 网页，可选 Blender 管线。 |
+| [html2surge](skills/html2surge/SKILL.md) | 将静态 HTML 文件或目录部署到 Surge，返回公开分享链接。 |
+| [netlify-deploy](skills/netlify-deploy/SKILL.md) | 将静态页面或已构建产物部署到 Netlify。 |
+| [pulse](skills/pulse/SKILL.md) | 聚合产品、开源趋势、新闻、播客与天气，生成科技简报。 |
+| [roadtrip](skills/roadtrip/SKILL.md) | 调研自驾路线、预算和真实旅行体验，制作交互旅行攻略。 |
+| [vercel-deploy](skills/vercel-deploy/SKILL.md) | 将静态页面或已构建产物部署到 Vercel。 |
 
 `awesome-design` 保持一条统一的审美主线：温润的表面、清楚的信息层级、单一品牌强调色、稳定空间关系和有因果的微反馈。它提供可执行的设计方法、CSS token、原创纹理、二维图解与三维交互样本。
 
@@ -22,6 +29,19 @@
 > 使用 awesome-design 设计并实现当前网页。保留暖纸与清晰的信息层级，按任务需要打磨 CSS 材质、图形和可中断动效。
 
 > 使用 awesome-writing 审阅这份技术方案，先指出影响读者理解与判断的问题，再按原文事实和作者风格重组。
+
+## 迁移技能的运行要求
+
+新增的 7 个 Skill 来自作者本地 Mira 迁移版本。本仓保留其工作方法和资源结构；公开版本不携带账户凭证，本地已安装版本不受影响。
+
+- `vercel-deploy` 需要环境变量 `VERCEL_TOKEN`；`netlify-deploy` 需要 `NETLIFY_AUTH_TOKEN`。缺少凭证时脚本立即退出，不安装 CLI 或发起部署。两者需要 Bash、Node/npm；Netlify 还使用 Python 3 与 curl。
+- `pulse` 使用 `uv run scripts/prefetch.py` 自动读取脚本声明的 Python 依赖。天气需要 `QWEATHER_API_BASE`（账户 API Host，包含 `https://`）和 `QWEATHER_API_KEY`；缺少配置只影响天气分片。`GITHUB_OAUTH_TOKEN` 为可选配置。
+- `html2surge` 使用 Node/npm 与 Python 3；已有账户凭证来自本机 `~/.netrc`，账户注册行为见其 Skill 和脚本。
+- `roadtrip` 的社交检索依赖可选的 Sensight，缺少时按参考文件改用其他信源；图片生成与网页设计由宿主已配置能力提供。资源构建依赖见各脚本。
+- `home-sweet-home` 包含 Three.js r147 本地资源；截图检查需要 `playwright-core` 与 Chrome，Blender 管线为可选。户型模板是示例输入，不是用户实际户型的默认结论。
+- `agentic-research` 保留 Mira 工具名称；其他宿主需要映射到自己的搜索、全文读取、浏览器和文档能力。企业信源和飞书归档依赖相应权限，缺少能力时明确报告限制，不声称已检索或已归档。
+
+这些迁移技能保留原有宿主依赖，不保证所有 Agent 环境开箱即用；按各 Skill 的输入与能力要求配置后使用。敏感配置只放运行环境，不写回 Skill 目录。
 
 ## 查看交互样本
 
@@ -54,6 +74,6 @@ npm --prefix skills/awesome-design/assets/web-lab ci --ignore-scripts
 
 ## 许可与来源
 
-原创内容采用 [MIT License](LICENSE)。`awesome-design` 的部分设计方法依据用户提供的 `frontend-design` 指引改写，相关部分保留 [Apache-2.0 许可](skills/awesome-design/references/licenses/Apache-2.0.txt)；Three.js 按其包内 MIT LICENSE 使用。公开视觉与技术依据见 [来源记录](skills/awesome-design/references/sources.md)。
+原创内容采用 [MIT License](LICENSE)。`awesome-design` 的部分设计方法依据用户提供的 `frontend-design` 指引改写，相关部分保留 [Apache-2.0 许可](skills/awesome-design/references/licenses/Apache-2.0.txt)；Three.js 按其包内 MIT LICENSE 使用；`home-sweet-home` 随附的 r147 浏览器资源保留[对应许可](skills/home-sweet-home/assets/native-template/vendor/LICENSE)。公开视觉与技术依据见 [来源记录](skills/awesome-design/references/sources.md)。
 
 参考文章的原始图片、私有项目源码和品牌资产不随仓库分发。
