@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>云璟江屿 · 归家 3D 空间效果图</title>
+<style>
+:root{--ink:#2a2420;--sub:#7a6e64;--accent:#b5653f;--panel:rgba(252,249,245,.86);--line:rgba(60,40,20,.10);--on:#2a2420}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden;background:#1b1714;font-family:-apple-system,"SF Pro Text","PingFang SC","Hiragino Sans GB",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+#app{position:fixed;inset:0;cursor:grab}body.grabbing #app{cursor:grabbing}body.plan #app{cursor:default}
+canvas{display:block}
+.glass{background:var(--panel);backdrop-filter:blur(20px) saturate(1.4);-webkit-backdrop-filter:blur(20px) saturate(1.4);border:1px solid var(--line);box-shadow:0 10px 34px rgba(40,25,10,.16)}
+#brand{position:fixed;top:16px;left:16px;padding:12px 16px;border-radius:14px;z-index:10;max-width:300px}
+#brand .k{font-size:9.5px;letter-spacing:.24em;color:var(--accent);font-weight:650}
+#brand h1{font-size:16px;font-weight:650;margin:3px 0 1px;letter-spacing:.01em}
+#brand p{font-size:11px;color:var(--sub)}
+#tools{position:fixed;top:16px;right:16px;display:flex;gap:8px;z-index:10}
+.seg{display:flex;padding:4px;border-radius:12px;gap:2px}
+.seg button,#b-shot,#b-panel{font:inherit;font-size:12.5px;border:0;background:transparent;color:var(--ink);border-radius:9px;padding:7px 12px;cursor:pointer;transition:background .15s,color .15s;white-space:nowrap}
+.seg button:hover,#b-shot:hover,#b-panel:hover{background:rgba(60,40,20,.07)}
+.seg button.on{background:var(--on);color:#fff}
+#b-shot,#b-panel{border-radius:12px;padding:11px 14px}
+#rooms{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);display:flex;gap:4px;padding:5px;border-radius:15px;z-index:10;max-width:calc(100vw - 24px);overflow-x:auto;scrollbar-width:none}
+#rooms::-webkit-scrollbar{display:none}
+.rbtn{font:inherit;border:0;background:transparent;color:var(--ink);border-radius:11px;padding:7px 11px;cursor:pointer;display:flex;flex-direction:column;align-items:center;min-width:62px;transition:.15s}
+.rbtn span{font-size:12.5px;font-weight:550;white-space:nowrap}.rbtn small{font-size:10px;color:var(--sub);margin-top:1px}
+.rbtn:hover{background:rgba(60,40,20,.07)}
+.rbtn.on{background:var(--on);color:#fff}.rbtn.on small{color:rgba(255,255,255,.65)}
+#room-panel{position:fixed;left:16px;top:96px;width:300px;max-height:calc(100vh - 190px);overflow:auto;padding:14px 16px;border-radius:14px;z-index:9;opacity:0;transform:translateX(-12px);pointer-events:none;transition:.25s}
+#room-panel.show{opacity:1;transform:none;pointer-events:auto}
+.ph{display:flex;gap:10px;align-items:center;margin-bottom:8px}
+.ph .no{font:600 12px/1 Georgia,serif;color:var(--accent);border:1px solid rgba(181,101,63,.35);border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;flex:none}
+.ph h2{font-size:15px;font-weight:650}.ph p{font-size:11px;color:var(--sub);margin-top:2px}
+.sec{margin-top:9px}.sec b{font-size:10.5px;letter-spacing:.12em;font-weight:650;display:inline-block;padding:1px 7px;border-radius:5px}
+.sec ul{list-style:none;margin-top:5px}.sec li{font-size:12px;line-height:1.55;color:#4a403a;padding-left:11px;position:relative;margin:2px 0}
+.sec li:before{content:"";position:absolute;left:0;top:.62em;width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.4}
+.keep b{background:#ece6dc;color:#6d6156}.change b{background:#f4dfd2;color:#a2522e}.add b{background:#dfe8d9;color:#4f6a43}.todo b{background:#efe3c4;color:#8a6a1e}
+#hint{position:fixed;left:50%;bottom:86px;transform:translateX(-50%);padding:9px 16px;border-radius:12px;font-size:12px;color:var(--ink);z-index:10;white-space:nowrap;transition:opacity .8s}
+#hint.fade{opacity:0;pointer-events:none}
+#hint kbd{font:inherit;font-size:11px;background:rgba(60,40,20,.08);border-radius:4px;padding:1px 5px;margin:0 1px}
+#labels{position:fixed;inset:0;pointer-events:none;z-index:8;display:none}
+body.plan #labels{display:block}
+.lbl{position:absolute;left:0;top:0;pointer-events:auto;cursor:pointer;font-size:12.5px;font-weight:600;color:var(--ink);background:rgba(252,249,245,.9);border:1px solid var(--line);border-radius:9px;padding:4px 9px;text-align:center;white-space:nowrap;box-shadow:0 4px 14px rgba(40,25,10,.15);transition:background .15s}
+.lbl small{display:block;font-size:10px;font-weight:500;color:var(--sub)}
+.lbl:hover{background:#fff}
+#loading{position:fixed;inset:0;background:#efe7dc;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:50;transition:opacity .6s}
+#loading.done{opacity:0;pointer-events:none}
+#loading p{font-size:13px;color:var(--sub);margin-top:12px;letter-spacing:.08em}
+#loading i{width:36px;height:36px;border:2px solid rgba(181,101,63,.25);border-top-color:var(--accent);border-radius:50%;animation:sp 0.9s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media (max-width:760px){#brand{display:none}#room-panel{top:auto;bottom:84px;width:calc(100vw - 32px);max-height:34vh}#tools{left:12px;right:12px;justify-content:center;flex-wrap:wrap}#hint{display:none}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="loading"><i></i><p>正在搭建你的家…</p></div>
+
+<div id="brand" class="glass">
+ <div class="k">HOMECOMING · YUNJING JIANGYU</div>
+ <h1>云璟江屿 B 户型 · 134㎡</h1>
+ <p>依据归家书逐间方案 · 原生 3D 实时渲染</p>
+</div>
+
+<div id="tools">
+ <div class="seg glass"><button data-view="eye" class="on">人视角</button><button data-view="plan">俯瞰</button></div>
+ <div class="seg glass"><button data-mode="dusk" class="on">黄昏</button><button data-mode="day">日间</button><button data-mode="night">夜晚</button></div>
+ <button id="b-panel" class="glass">方案</button>
+ <button id="b-shot" class="glass">出图</button>
+</div>
+
+<div id="room-panel" class="glass"></div>
+<div id="labels"></div>
+<div id="hint" class="glass">拖拽环视 · 滚轮缩放 · 双击地面走过去 · <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 走动 · 底部切换房间</div>
+<div id="rooms" class="glass"></div>
+
+<script src="vendor/build/three.min.js"></script>
+<script src="vendor/examples/js/controls/OrbitControls.js"></script>
+<script src="vendor/examples/js/environments/RoomEnvironment.js"></script>
+<script src="vendor/examples/js/geometries/RoundedBoxGeometry.js"></script>
+<script src="vendor/examples/js/utils/BufferGeometryUtils.js"></script>
+<script src="home-data.js"></script>
+<script src="materials.js"></script>
+<script src="plants.js"></script>
+<script src="scene.js"></script>
+<script src="viewer.js"></script>
+</body>
+</html>
