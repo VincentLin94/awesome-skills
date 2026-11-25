@@ -15,6 +15,7 @@
 | [pulse](skills/pulse/SKILL.md) | 聚合产品、开源趋势、新闻、播客与天气，生成科技简报。 |
 | [roadtrip](skills/roadtrip/SKILL.md) | 调研自驾路线、预算和真实旅行体验，制作交互旅行攻略。 |
 | [vercel-deploy](skills/vercel-deploy/SKILL.md) | 将静态页面或已构建产物部署到 Vercel。 |
+| [Capybara](skills/capybara/SKILL.md) | 卡卡与皮皮拟人化卡皮巴拉 IP：角色、性格、画风、背景、资源生成与属性配置。 |
 
 `awesome-design` 保持一条统一的审美主线：温润的表面、清楚的信息层级、单一品牌强调色、稳定空间关系和有因果的微反馈。它提供可执行的设计方法、CSS token、原创纹理、二维图解与三维交互样本。
 
@@ -29,6 +30,12 @@
 > 使用 awesome-design 设计并实现当前网页。保留暖纸与清晰的信息层级，按任务需要打磨 CSS 材质、图形和可中断动效。
 
 > 使用 awesome-writing 审阅这份技术方案，先指出影响读者理解与判断的问题，再按原文事实和作者风格重组。
+
+> 使用 Capybara 制作卡卡与皮皮在雨后栈桥上喝茶的无字封面，保留两只的识别特征与暖纸水彩画风。
+
+Capybara 的角色设定集中在 [IP 配置](skills/capybara/assets/ip-config.json)，[资源入口](skills/capybara/references/resources.md)按任务指向立绘、表情、动作关键帧与背景。随包提供压缩 WebP 参考，原始大图、GIF 和视频仅保留相对路径索引；没有原素材库时仍可用内置参考创作。素材查询脚本只依赖 Python 3 标准库，实际图片与视频生成使用宿主已配置的能力。
+
+![卡卡与皮皮 IP 参考](skills/capybara/assets/ip-overview.webp)
 
 ## 迁移技能的运行要求
 
@@ -76,4 +83,4 @@ npm --prefix skills/awesome-design/assets/web-lab ci --ignore-scripts
 
 原创内容采用 [MIT License](LICENSE)。`awesome-design` 的部分设计方法依据用户提供的 `frontend-design` 指引改写，相关部分保留 [Apache-2.0 许可](skills/awesome-design/references/licenses/Apache-2.0.txt)；Three.js 按其包内 MIT LICENSE 使用；`home-sweet-home` 随附的 r147 浏览器资源保留[对应许可](skills/home-sweet-home/assets/native-template/vendor/LICENSE)。公开视觉与技术依据见 [来源记录](skills/awesome-design/references/sources.md)。
 
-参考文章的原始图片、私有项目源码和品牌资产不随仓库分发。
+参考文章的原始图片、私有项目源码和第三方品牌资产不随仓库分发。

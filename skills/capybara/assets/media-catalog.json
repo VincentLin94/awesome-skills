@@ -1,0 +1,2010 @@
+{
+  "path_base": "原件路径相对于使用方项目根目录；内置参考路径相对于Skill目录",
+  "coverage": "覆盖列出的素材目录内全部图片、GIF和MP4；压缩包属于分发副本，不另收录",
+  "source_directories": [
+    "capybara-portraits",
+    "capybara-portraits-round2",
+    "capybara-emoji",
+    "卡卡皮皮-飞书文档封面",
+    "卡卡皮皮-飞书封面-重绘版",
+    "卡卡皮皮-飞书封面-满幅水彩版",
+    "capy-skill-trace/assets/crew"
+  ],
+  "bundled_references": [
+    {
+      "path": "assets/characters/duo-standing.webp",
+      "sources": [
+        "capybara-emoji/水彩自然动作9款/动作源素材/本次六款动作关键帧.png"
+      ],
+      "operation": "裁取第4行第1列，原图区域 [0, 1536, 512, 2048]",
+      "width": 512,
+      "height": 512,
+      "bytes": 40508
+    },
+    {
+      "path": "assets/characters/kaka-standing.webp",
+      "sources": [
+        "capybara-emoji/水彩自然动作9款/动作源素材/本次六款动作关键帧.png"
+      ],
+      "operation": "裁取第4行第1列右侧卡卡；保留纸底",
+      "width": 249,
+      "height": 512,
+      "bytes": 19522
+    },
+    {
+      "path": "assets/characters/pipi-standing.webp",
+      "sources": [
+        "capybara-emoji/水彩自然动作9款/动作源素材/本次六款动作关键帧.png"
+      ],
+      "operation": "裁取第4行第1列左侧皮皮；保留纸底",
+      "width": 263,
+      "height": 512,
+      "bytes": 20452
+    },
+    {
+      "path": "assets/motion/six-action-keyframes.webp",
+      "sources": [
+        "capybara-emoji/水彩自然动作9款/动作源素材/本次六款动作关键帧.png"
+      ],
+      "operation": "缩放",
+      "width": 1365,
+      "height": 2048,
+      "bytes": 324882
+    },
+    {
+      "path": "assets/characters/expression-views.webp",
+      "sources": [
+        "capybara-emoji/可爱日常-自然动作修订版/动作素材/卡卡皮皮-多视角动作关键帧.png"
+      ],
+      "operation": "缩放",
+      "width": 1536,
+      "height": 768,
+      "bytes": 169210
+    },
+    {
+      "path": "assets/characters/kaka-bust.webp",
+      "sources": [
+        "capy-skill-trace/assets/crew/kaka.webp"
+      ],
+      "operation": "复用已有透明胸像，未重编码",
+      "width": 304,
+      "height": 315,
+      "bytes": 20688
+    },
+    {
+      "path": "assets/characters/pipi-bust.webp",
+      "sources": [
+        "capy-skill-trace/assets/crew/pipi.webp"
+      ],
+      "operation": "复用已有透明胸像，未重编码",
+      "width": 292,
+      "height": 305,
+      "bytes": 25232
+    },
+    {
+      "path": "assets/style/watercolor-world.webp",
+      "sources": [
+        "卡卡皮皮-飞书封面-满幅水彩版/五款满幅封面速览.jpg"
+      ],
+      "operation": "缩放",
+      "width": 1256,
+      "height": 1280,
+      "bytes": 158968
+    },
+    {
+      "path": "assets/style/historical-styles.webp",
+      "sources": [
+        "capybara-portraits/五种风格预览.png"
+      ],
+      "operation": "缩放",
+      "width": 1600,
+      "height": 439,
+      "bytes": 97626
+    },
+    {
+      "path": "assets/style/historical-scenes.webp",
+      "sources": [
+        "capybara-portraits-round2/六张肖像预览.png"
+      ],
+      "operation": "缩放",
+      "width": 1200,
+      "height": 808,
+      "bytes": 142278
+    },
+    {
+      "path": "assets/motion/social-expressions.webp",
+      "sources": [
+        "capybara-emoji/水彩重制版/六款预览.png"
+      ],
+      "operation": "缩放",
+      "width": 1200,
+      "height": 800,
+      "bytes": 169078
+    },
+    {
+      "path": "assets/motion/natural-actions.webp",
+      "sources": [
+        "capybara-emoji/水彩自然动作9款/九款预览.png"
+      ],
+      "operation": "缩放",
+      "width": 1280,
+      "height": 1280,
+      "bytes": 200708
+    },
+    {
+      "path": "assets/scenes/planning.webp",
+      "sources": [
+        "卡卡皮皮-飞书封面-满幅水彩版/01-Agentic-测试规划与审查.png"
+      ],
+      "operation": "缩放",
+      "width": 1600,
+      "height": 320,
+      "bytes": 76860
+    },
+    {
+      "path": "assets/scenes/launch.webp",
+      "sources": [
+        "卡卡皮皮-飞书封面-满幅水彩版/02-项目启动-溪岸启程.png"
+      ],
+      "operation": "缩放",
+      "width": 1600,
+      "height": 320,
+      "bytes": 62980
+    },
+    {
+      "path": "assets/scenes/weekly.webp",
+      "sources": [
+        "卡卡皮皮-飞书封面-满幅水彩版/03-进展周报-栈桥潮位.png"
+      ],
+      "operation": "缩放",
+      "width": 1600,
+      "height": 320,
+      "bytes": 53090
+    },
+    {
+      "path": "assets/scenes/retrospective.webp",
+      "sources": [
+        "卡卡皮皮-飞书封面-满幅水彩版/04-项目复盘-秋岸拾石.png"
+      ],
+      "operation": "缩放",
+      "width": 1600,
+      "height": 320,
+      "bytes": 62336
+    },
+    {
+      "path": "assets/scenes/notes.webp",
+      "sources": [
+        "卡卡皮皮-飞书封面-满幅水彩版/05-团队随笔-柳岸茶歇.png"
+      ],
+      "operation": "缩放",
+      "width": 1600,
+      "height": 320,
+      "bytes": 59314
+    },
+    {
+      "path": "assets/motion/timing-strips.webp",
+      "sources": [
+        "capybara-emoji/水彩自然动作9款/01-认真擦靴.gif",
+        "capybara-emoji/水彩自然动作9款/02-喝茶烫嘴.gif",
+        "capybara-emoji/水彩自然动作9款/03-猛啃柚子.gif",
+        "capybara-emoji/水彩自然动作9款/04-刷牙泡泡胡子.gif",
+        "capybara-emoji/水彩自然动作9款/05-伸懒腰打喷嚏.gif",
+        "capybara-emoji/水彩自然动作9款/06-擦桌挤成团.gif",
+        "capybara-emoji/水彩自然动作9款/07-闪身步.gif",
+        "capybara-emoji/水彩自然动作9款/08-浪子踢球.gif",
+        "capybara-emoji/水彩自然动作9款/09-狗熊哆嗦毛.gif"
+      ],
+      "operation": "按实际时间轴0%、25%、50%、75%抽取4帧；不代表完整循环",
+      "width": 1024,
+      "height": 2538,
+      "bytes": 320556
+    },
+    {
+      "path": "assets/ip-overview.webp",
+      "sources": [
+        "capybara-emoji/水彩自然动作9款/动作源素材/本次六款动作关键帧.png",
+        "capybara-emoji/水彩重制版/六款预览.png",
+        "卡卡皮皮-飞书封面-满幅水彩版/01-Agentic-测试规划与审查.png",
+        "卡卡皮皮-飞书封面-满幅水彩版/02-项目启动-溪岸启程.png",
+        "卡卡皮皮-飞书封面-满幅水彩版/03-进展周报-栈桥潮位.png"
+      ],
+      "operation": "拼接立绘、表情与背景参考",
+      "width": 1600,
+      "height": 1320,
+      "bytes": 207722
+    }
+  ],
+  "timing_samples": [
+    {
+      "source": "capybara-emoji/水彩自然动作9款/01-认真擦靴.gif",
+      "frame_indexes": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "duration_ms": 1600
+    },
+    {
+      "source": "capybara-emoji/水彩自然动作9款/02-喝茶烫嘴.gif",
+      "frame_indexes": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "duration_ms": 1600
+    },
+    {
+      "source": "capybara-emoji/水彩自然动作9款/03-猛啃柚子.gif",
+      "frame_indexes": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "duration_ms": 1600
+    },
+    {
+      "source": "capybara-emoji/水彩自然动作9款/04-刷牙泡泡胡子.gif",
+      "frame_indexes": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "duration_ms": 1600
+    },
+    {
+      "source": "capybara-emoji/水彩自然动作9款/05-伸懒腰打喷嚏.gif",
+      "frame_indexes": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "duration_ms": 1600
+    },
+    {
+      "source": "capybara-emoji/水彩自然动作9款/06-擦桌挤成团.gif",
+      "frame_indexes": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "duration_ms": 1600
+    },
+    {
+      "source": "capybara-emoji/水彩自然动作9款/07-闪身步.gif",
+      "frame_indexes": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "duration_ms": 1600
+    },
+    {
+      "source": "capybara-emoji/水彩自然动作9款/08-浪子踢球.gif",
+      "frame_indexes": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "duration_ms": 1600
+    },
+    {
+      "source": "capybara-emoji/水彩自然动作9款/09-狗熊哆嗦毛.gif",
+      "frame_indexes": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "duration_ms": 1600
+    }
+  ],
+  "originals": [
+    {
+      "sha256": "c4a6663a44e8204697b8cb839416e4df54c9ddeda7a022f54e4e3ec086cdcf2c",
+      "bytes": 5742133,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/01-hand-drawn.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1680,
+      "height": 2240
+    },
+    {
+      "sha256": "b19581bddc3022cc4cca0045a62ae9f1cd0baf55823e27dbcd8660fee55009bd",
+      "bytes": 3955093,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/01-手绘.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1680,
+      "height": 2240
+    },
+    {
+      "sha256": "410b9fc411acbfd2b6736ca1d477c861896425b0d22b2b0183db7c6123c91ac6",
+      "bytes": 1662468,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/02-anime.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1680,
+      "height": 2240
+    },
+    {
+      "sha256": "b7e78bf4686c9c31dd7e16b92f9054016f65afa9a1a8cda67b4845d8bfb1e111",
+      "bytes": 1291163,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/02-动漫.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1680,
+      "height": 2240
+    },
+    {
+      "sha256": "82908aec583ca161cec487a170d1bfed61cfc7d59adfbc14a5eb479ba81ca98e",
+      "bytes": 4163802,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/03-ghibli.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1680,
+      "height": 2240
+    },
+    {
+      "sha256": "b91f584fe8c027640c265335ae9f1938a074ed0ef9d9e21ce1aa94f1311ec9ea",
+      "bytes": 2574015,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/03-吉卜力田园.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1680,
+      "height": 2240
+    },
+    {
+      "sha256": "b21206417bd427aef4e6c766508500b11bf99e719d81e81f3c8a539fecd405da",
+      "bytes": 5237966,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/04-cyberpunk.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1680,
+      "height": 2240
+    },
+    {
+      "sha256": "cbb2819bf94a1920ea4d31e985467905233b622b8bb8986234f8eab61258800d",
+      "bytes": 3109818,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/04-赛博朋克.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1680,
+      "height": 2240
+    },
+    {
+      "sha256": "30e652bb4bca288a8e14e97e09521f02e23ba70b29acdbc4a4f66b2bca6cb185",
+      "bytes": 1989814,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/05-clay.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1680,
+      "height": 2240
+    },
+    {
+      "sha256": "5795988738d4cf409aed076058ec8f307739bdeb0c8146ae52f6d5ae6fd6f22a",
+      "bytes": 5759302,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/05-复古童话.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1680,
+      "height": 2240
+    },
+    {
+      "sha256": "1729edf22816f30ba17c33dc1494b69573d6186a87e69715d630c48c1ec509f9",
+      "bytes": 4108497,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/assets/01-handdrawn.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1680,
+      "height": 2240
+    },
+    {
+      "sha256": "0806b95bc9cd64d225bfa9decafe22f830214459398bac0c6b9960c2b9a9dfe5",
+      "bytes": 2175205,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/assets/02-anime.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1680,
+      "height": 2240
+    },
+    {
+      "sha256": "a3a9355b36df4c87d9eab879d49d8d88805c0df8d1f6db1470884eec249f6d1c",
+      "bytes": 4083123,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/assets/03-ghibli.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1680,
+      "height": 2240
+    },
+    {
+      "sha256": "a3170aa332c337343e0cac3d5ed9fa3af28612ad834c9e573d9e3285210be4d2",
+      "bytes": 6202932,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/assets/04-cyberpunk.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1680,
+      "height": 2240
+    },
+    {
+      "sha256": "e4c7a8f7a73435accd1b7cae0e543e9f5c8585614910d6bc571d19ddb3c63a1c",
+      "bytes": 2920768,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/assets/05-claymation.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1680,
+      "height": 2240
+    },
+    {
+      "sha256": "1abfd41f5035ca16e5db07ac87912df0971511b7e87fe74be31a2a245dc9f6c3",
+      "bytes": 326806,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/assets/avatar-ghibli-01.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "48730d00a27f907703684036b39b25566714f84186685374f80c03c210715d0c",
+      "bytes": 326992,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/assets/avatar-ghibli-02.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "dd768d0aad80f0c17d0b040c080eeb5af9ed8e327d4da17b832bd1625dbb77aa",
+      "bytes": 313649,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/assets/avatar-ghibli-03.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "781199bbfbe528a2f83335f5b3bcc0011481695bc8efa5534dd877e871d6b61a",
+      "bytes": 345539,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/assets/avatar-hand-01.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "21117f3f667b4b2a361700360280f06657ea7644788d19c7d61c948b7cdf623f",
+      "bytes": 340574,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/assets/avatar-hand-02.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "66bb19a10b3350af7e1f4711c5a33598974522908add66347e1bf6fbedbf0233",
+      "bytes": 384935,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/assets/avatar-hand-03.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "4779074a2088934b0dc3c394297597e01daa64d010fc44dea076dc163e8cc3ac",
+      "bytes": 2069218,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/assets/avatar-hand-04.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "280114f85bb82b85274be73d8a114f7cdd890d2df711f98341768f8842393440",
+      "bytes": 2444647,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/cyber-avatar-01-rain.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "2def458d894be0a1acacf2e0fdd34a13b2965e4078b4fe525a4de15b78aa2ff5",
+      "bytes": 2047126,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/cyber-avatar-02-dataroom.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "618e78c3fc506fca006e1cdab7bf2a7cf2df577b8be05114d0e7b79f4e1db948",
+      "bytes": 2452447,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/cyber-avatar-03-rooftop.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "14d15d36447c281654896eccc8eff438c981e6a55a2b059915e61bd3b3856063",
+      "bytes": 1724807,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits/五种风格预览.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 2244,
+      "height": 616
+    },
+    {
+      "sha256": "621023cc67d13e73a67281e200bf7e78759f2fba55f98fdfed347bd22e365ff9",
+      "bytes": 2290383,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits-round2/01-手绘-雨中小憩.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "53f9b8fca90b1ac33d4e42c3508062be10ef47c37ca0c68cd8a3c2e9a278848b",
+      "bytes": 2074037,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits-round2/02-手绘-面包店.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "edb35c577f59fd7b28697682fe1572848ce3fad458ef863098d08c44fd0acb8a",
+      "bytes": 2651222,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits-round2/03-手绘-月下荷塘.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "8176379660ebd2a13529a6d8383e3441590dc0a05eaee41fb848b592df334a3c",
+      "bytes": 1489089,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits-round2/04-吉卜力-海边吹风.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "b600813033719dcc563e679f9ca289deb136c305aca5362c5fdd73fc8c1d4fbf",
+      "bytes": 1211756,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits-round2/05-吉卜力-列车旅行.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "6920a8ff3b7900c7ec1b5866924236450596dc6d73456da05220d79d9614b3e0",
+      "bytes": 1800556,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits-round2/06-吉卜力-森林灯火.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "sha256": "852d431ea81eacce1aafd5fa72b0233dc3b2f24132215e5b43000c64f28129a8",
+      "bytes": 1721560,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-portraits-round2/六张肖像预览.png",
+          "family": "肖像",
+          "use": "历史画风探索"
+        }
+      ],
+      "width": 1348,
+      "height": 908
+    },
+    {
+      "sha256": "53c471c860f13b8bdf391d89e7de6bfd1d3a0722003232df9a520ab7654ad16d",
+      "bytes": 361589,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/build/gif-out/01-ring-bell.gif",
+          "family": "矢量表情",
+          "use": "早期矢量版本"
+        },
+        {
+          "path": "capybara-emoji/gif/01-按铃呼叫.gif",
+          "family": "矢量表情",
+          "use": "早期矢量版本"
+        }
+      ],
+      "width": 480,
+      "height": 480,
+      "frames": 14,
+      "duration_ms": 1260
+    },
+    {
+      "sha256": "a1097228154ec0b517c0ced15e3635f1b593a2be0184309c35ba772a0c80ab0b",
+      "bytes": 390487,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/build/gif-out/02-bow-thanks.gif",
+          "family": "矢量表情",
+          "use": "早期矢量版本"
+        },
+        {
+          "path": "capybara-emoji/gif/02-鞠躬致谢.gif",
+          "family": "矢量表情",
+          "use": "早期矢量版本"
+        }
+      ],
+      "width": 480,
+      "height": 480,
+      "frames": 14,
+      "duration_ms": 1260
+    },
+    {
+      "sha256": "67fdbb673075351101e3a4b4a83f6d9599df74ede3fc1d5b3dbee515d58d342f",
+      "bytes": 397749,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/build/gif-out/03-clap-cheer.gif",
+          "family": "矢量表情",
+          "use": "早期矢量版本"
+        },
+        {
+          "path": "capybara-emoji/gif/03-鼓掌喝彩.gif",
+          "family": "矢量表情",
+          "use": "早期矢量版本"
+        }
+      ],
+      "width": 480,
+      "height": 480,
+      "frames": 14,
+      "duration_ms": 1260
+    },
+    {
+      "sha256": "7dfa31947d47c136646425abe2f7335ed724a5fcbbdc2987a9a505bca647f08e",
+      "bytes": 375658,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/build/gif-out/04-onsen-chill.gif",
+          "family": "矢量表情",
+          "use": "早期矢量版本"
+        },
+        {
+          "path": "capybara-emoji/gif/04-温泉躺平.gif",
+          "family": "矢量表情",
+          "use": "早期矢量版本"
+        }
+      ],
+      "width": 480,
+      "height": 480,
+      "frames": 14,
+      "duration_ms": 1260
+    },
+    {
+      "sha256": "f9faab1b4d8ccc1338a5e23e224906360a0f4e4f73383bd9904ddca02156fe30",
+      "bytes": 403436,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/build/gif-out/05-heart-jump.gif",
+          "family": "矢量表情",
+          "use": "早期矢量版本"
+        },
+        {
+          "path": "capybara-emoji/gif/05-蹦跳比心.gif",
+          "family": "矢量表情",
+          "use": "早期矢量版本"
+        }
+      ],
+      "width": 480,
+      "height": 480,
+      "frames": 14,
+      "duration_ms": 1260
+    },
+    {
+      "sha256": "3a8bcdd92ba8272f0042995c617efcd5ac918d75b5b7d9b2207ef7c9236b803f",
+      "bytes": 404336,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/build/gif-out/06-wave-no.gif",
+          "family": "矢量表情",
+          "use": "早期矢量版本"
+        },
+        {
+          "path": "capybara-emoji/gif/06-摆手拒绝.gif",
+          "family": "矢量表情",
+          "use": "早期矢量版本"
+        }
+      ],
+      "width": 480,
+      "height": 480,
+      "frames": 14,
+      "duration_ms": 1260
+    },
+    {
+      "sha256": "422b882ddc44f7fc17dc0ca28890a20eab7c27c310b1b790f7f35075f9a62f6e",
+      "bytes": 1738126,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/可爱搞怪日常-动态预览.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 768,
+      "height": 512,
+      "frames": 36,
+      "duration_ms": 1800
+    },
+    {
+      "sha256": "21ba34e83a2fa5ef2cce808fdc720df98b943a9c40f3c0b19438d897ca158e3d",
+      "bytes": 759321,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/可爱搞怪日常6款-5MB版/01-认真擦靴.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        },
+        {
+          "path": "capybara-emoji/可爱日常-自然动作修订版/01-认真擦靴.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 36,
+      "duration_ms": 1800
+    },
+    {
+      "sha256": "fb45f3965c6a79c5a99273d35afbf141a9e5ca65b283d11dd05e6bd3517fd0c0",
+      "bytes": 1106885,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/可爱搞怪日常6款-5MB版/02-喝茶烫嘴.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        },
+        {
+          "path": "capybara-emoji/可爱日常-自然动作修订版/02-喝茶烫嘴.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 36,
+      "duration_ms": 1800
+    },
+    {
+      "sha256": "66e17c523a93a5b9c549b860168cf3ade31ae74831ef05a59500311d57715620",
+      "bytes": 1452005,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/可爱搞怪日常6款-5MB版/03-猛啃柚子.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        },
+        {
+          "path": "capybara-emoji/可爱日常-自然动作修订版/03-猛啃柚子.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 35,
+      "duration_ms": 1800
+    },
+    {
+      "sha256": "657c346146876f8270efdf31888a33a614fd350e4f4614cb5355feb98969ff60",
+      "bytes": 866623,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/可爱搞怪日常6款-5MB版/04-甩叶溅自己.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 36,
+      "duration_ms": 1800
+    },
+    {
+      "sha256": "96d26a7d3533205025cb24521c6337bac2820031a1f9c1df68238dd7fa2069e0",
+      "bytes": 1320441,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/可爱搞怪日常6款-5MB版/05-困到磕桌.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 36,
+      "duration_ms": 1800
+    },
+    {
+      "sha256": "ec654db6339a9d4fcd2ea45042686295ea2a705d0a45c9fb4e39c5abc3ff6989",
+      "bytes": 722057,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/可爱搞怪日常6款-5MB版/06-抢最后一口.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 31,
+      "duration_ms": 1800
+    },
+    {
+      "sha256": "6972a6fc6429c8bb7d1ca29dabee13d6f6e546e76fdeb6a3efee3ff8237ce7b7",
+      "bytes": 1796140,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-emoji/可爱搞怪日常6款-5MB版/六款预览.png",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "sha256": "b479bb1b0debff436063e657c4012ef6e40b17a2053dd9cb28caddd384673f8a",
+      "bytes": 4552611,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/可爱日常-自然动作修订版/04-刷牙泡泡胡子.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        },
+        {
+          "path": "capybara-emoji/水彩自然动作9款/04-刷牙泡泡胡子.gif",
+          "family": "自然动作",
+          "use": "当前动作参考"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "5b73121818999522b9e6d8a7c99631c4a73edd8bc0a30edb8d89f2a0503d7494",
+      "bytes": 4419410,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/可爱日常-自然动作修订版/05-伸懒腰打喷嚏.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        },
+        {
+          "path": "capybara-emoji/水彩自然动作9款/05-伸懒腰打喷嚏.gif",
+          "family": "自然动作",
+          "use": "当前动作参考"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "c3587ebd660226ca52e5eefc7ced624a4602bd99bc4384eaea549c9dbd998d78",
+      "bytes": 3587022,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/可爱日常-自然动作修订版/06-擦桌挤成团.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        },
+        {
+          "path": "capybara-emoji/水彩自然动作9款/06-擦桌挤成团.gif",
+          "family": "自然动作",
+          "use": "当前动作参考"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "ff9b96b84cb232037cc9bdd111147e6c6a91f4b4e9234c3a0735ca8420bac764",
+      "bytes": 2026316,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-emoji/可爱日常-自然动作修订版/六款预览.png",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "sha256": "fd10749d39dd9b7db330cdddcd90d004374f1c5e083e90370c3ba660bb66d83b",
+      "bytes": 4285235,
+      "kind": "video",
+      "locations": [
+        {
+          "path": "capybara-emoji/可爱日常-自然动作修订版/动作素材/三款连贯动作源视频.mp4",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        },
+        {
+          "path": "capybara-emoji/水彩自然动作9款/动作源素材/上一轮三款自然动作.mp4",
+          "family": "自然动作",
+          "use": "当前动作参考"
+        }
+      ]
+    },
+    {
+      "sha256": "4adf61e6ad0fb404e2ac024cefe62b705b8194f623c6ed9025396979c4198936",
+      "bytes": 2876367,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-emoji/可爱日常-自然动作修订版/动作素材/卡卡皮皮-多视角动作关键帧.png",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 2048,
+      "height": 1024
+    },
+    {
+      "sha256": "ad620d53b5fb2f21602a13003c0c2523de8cea4b23ba9564a7ca21d2a217924b",
+      "bytes": 2510461,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/憨憨抽象6款-5MB版/01-霸王甩臂.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "20f2f78e2687e41f6636d949f8e45f4df7ff4e618614cbe641eab6eab060459d",
+      "bytes": 2695971,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/憨憨抽象6款-5MB版/02-怒目急蹲.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "033fbb29b4a4f0159e3b8bbaa341f04caac6a00f5b89352e2ee6df75e0d31a91",
+      "bytes": 2667292,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/憨憨抽象6款-5MB版/03-花手发癫.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "c9c80e21c685ee10b3408f6e082e408e427c93cfff0f10b54c2146a819f35e15",
+      "bytes": 3169657,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/憨憨抽象6款-5MB版/04-上头乱拳.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "393e4aa627a97a33e9c8733e6d91cd4db8b7e8260c88d1deba2ed49b75a7665f",
+      "bytes": 2387244,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/憨憨抽象6款-5MB版/05-脖子打结.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "c9ab02e9aa7a7d685b31af8b88b8559fd119d6b8abf49a274a645cac851ff8b8",
+      "bytes": 2092051,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/憨憨抽象6款-5MB版/06-全身弹簧.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "d6686a676a169a18a9b85f3c45345a79a92d0e1a6416b98b3c93db76f9f79409",
+      "bytes": 1239292,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-emoji/憨憨抽象6款-5MB版/六款预览.png",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "sha256": "c56f3347b5ab88a6f9698a39b08ceb5dfe1c9008963c9a325308055f84014da7",
+      "bytes": 3734843,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/抽象快动作-动态总览.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 768,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "2935078daf34804853ae96d30ce51276681c02b42147ac3671c1014cb5f4e910",
+      "bytes": 4326362,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/日常6款-5MB版/01-按铃呼叫.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 38,
+      "duration_ms": 3160
+    },
+    {
+      "sha256": "9e30f95396c1bc5883285db8ce9bac84f5d209ee133b5ced1b664c26a115bd51",
+      "bytes": 4532160,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/日常6款-5MB版/02-鞠躬致谢.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 42,
+      "duration_ms": 3500
+    },
+    {
+      "sha256": "9361c87dc7d333ff5ba217d05a8bcc7fed4a908f3c836d8c93224a0ca443df5e",
+      "bytes": 2909148,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/日常6款-5MB版/03-鼓掌喝彩.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 22,
+      "duration_ms": 1830
+    },
+    {
+      "sha256": "a1a8c1a2713a43d72f2dd3673558b181783c892151817cacc7f9fc6375baf727",
+      "bytes": 3598865,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/日常6款-5MB版/04-温泉躺平.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 45,
+      "duration_ms": 3750
+    },
+    {
+      "sha256": "5748afc1a5b504966f19a3202c09af719783ccda06817f22b17fd826eaf716f6",
+      "bytes": 4711037,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/日常6款-5MB版/05-开心比心.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 45,
+      "duration_ms": 3750
+    },
+    {
+      "sha256": "fdbbd9a2cddad370a9080fe94703243fda1412f52e6c51345e8f18fa1e4c8a20",
+      "bytes": 3334589,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/日常6款-5MB版/06-摆手拒绝.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 35,
+      "duration_ms": 2910
+    },
+    {
+      "sha256": "acc1fae18da39ef4c6ea16a148230afbb9ea7c4f92121600193135e54dafe1a5",
+      "bytes": 1614258,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-emoji/日常6款-5MB版/六款预览.png",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 1152,
+      "height": 768
+    },
+    {
+      "sha256": "c85c76cc79137b68813229b2bd4eb31b1fa902833e379d713f57bf24d9382526",
+      "bytes": 2666879,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩自然动作9款/01-认真擦靴.gif",
+          "family": "自然动作",
+          "use": "当前动作参考"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "02515ad41eec33864d94a91715449bfb949a78421589a8a4721eab58f1641e75",
+      "bytes": 3812897,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩自然动作9款/02-喝茶烫嘴.gif",
+          "family": "自然动作",
+          "use": "当前动作参考"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "87703c9a52b46fe3c896f070652c27df5fce4e7c4cefe1d02fa7880bf331abbd",
+      "bytes": 3397606,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩自然动作9款/03-猛啃柚子.gif",
+          "family": "自然动作",
+          "use": "当前动作参考"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "cfa0787176282de064b36334e2e134fa983238949850162213a3edc967c6d42a",
+      "bytes": 3930279,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩自然动作9款/07-闪身步.gif",
+          "family": "自然动作",
+          "use": "当前动作参考"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "79a7f57e7253292073446b9f709ad946b91b1c468630cd3b34e6c8f4cf7d2e72",
+      "bytes": 3386940,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩自然动作9款/08-浪子踢球.gif",
+          "family": "自然动作",
+          "use": "当前动作参考"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "8e3a5fe77e3f009151ac33e1aafae7f254a6add6903ec6efd55227cb3e49b042",
+      "bytes": 3824558,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩自然动作9款/09-狗熊哆嗦毛.gif",
+          "family": "自然动作",
+          "use": "当前动作参考"
+        }
+      ],
+      "width": 512,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "3113de4269383e576e444a3a541eaf0e74c9782c017852add6f1ef8e65f30cb8",
+      "bytes": 3311206,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩自然动作9款/九款预览.png",
+          "family": "自然动作",
+          "use": "当前动作参考"
+        }
+      ],
+      "width": 1536,
+      "height": 1536
+    },
+    {
+      "sha256": "6a2e5a2bfd6aa1669393e0eb11f95c45755fb6aa2b8cf59c0ecc42faccb35434",
+      "bytes": 4409275,
+      "kind": "video",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩自然动作9款/动作源素材/日常三款全重绘.mp4",
+          "family": "自然动作",
+          "use": "当前动作参考"
+        }
+      ]
+    },
+    {
+      "sha256": "2366a0c6b2640f8a90b33558bb5f43cbdec5d08e8260e1dce46088273fa417b5",
+      "bytes": 8608957,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩自然动作9款/动作源素材/本次六款动作关键帧.png",
+          "family": "自然动作",
+          "use": "当前动作参考"
+        }
+      ],
+      "width": 2048,
+      "height": 3072
+    },
+    {
+      "sha256": "dbb01b4a3ebc20d2e5ee3c80cf00431ffdf81be4f9cfae28487e2dc09c905ab7",
+      "bytes": 4140142,
+      "kind": "video",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩自然动作9款/动作源素材/热梗步法短段.mp4",
+          "family": "自然动作",
+          "use": "当前动作参考"
+        }
+      ]
+    },
+    {
+      "sha256": "b0f3e0b48e9d2d95f5e70c50503925bd4afe299847c2a928788636ff6004b044",
+      "bytes": 42461636,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩重制版/01-按铃呼叫.gif",
+          "family": "社交表情",
+          "use": "水彩表情参考"
+        }
+      ],
+      "width": 960,
+      "height": 960,
+      "frames": 64,
+      "duration_ms": 3200
+    },
+    {
+      "sha256": "5d8ecee12b4a239f1ed295e31d5ac9d70e28f5aa12af782d94f625b427b5f51d",
+      "bytes": 43239539,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩重制版/02-鞠躬致谢.gif",
+          "family": "社交表情",
+          "use": "水彩表情参考"
+        }
+      ],
+      "width": 960,
+      "height": 960,
+      "frames": 70,
+      "duration_ms": 3500
+    },
+    {
+      "sha256": "91021dd97bce4d7635d047f29f8126e3e222332d6b439b807f537734e1ffcd47",
+      "bytes": 24544529,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩重制版/03-鼓掌喝彩.gif",
+          "family": "社交表情",
+          "use": "水彩表情参考"
+        }
+      ],
+      "width": 960,
+      "height": 960,
+      "frames": 37,
+      "duration_ms": 1850
+    },
+    {
+      "sha256": "9b51354c69118176adca613cfee6ff508792c76d859e0c3363682d105ca75e5b",
+      "bytes": 47703483,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩重制版/04-温泉躺平.gif",
+          "family": "社交表情",
+          "use": "水彩表情参考"
+        }
+      ],
+      "width": 960,
+      "height": 960,
+      "frames": 75,
+      "duration_ms": 3750
+    },
+    {
+      "sha256": "a09ef59a367b44685c87fcc3f7ba140bd6a696a33571eb5e80d5e1a9aa810c7f",
+      "bytes": 47112638,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩重制版/05-开心比心.gif",
+          "family": "社交表情",
+          "use": "水彩表情参考"
+        }
+      ],
+      "width": 960,
+      "height": 960,
+      "frames": 75,
+      "duration_ms": 3750
+    },
+    {
+      "sha256": "6d6fa9b87dc116d983dc997d9ce5a864d5ce446f14b73cdf14f01c2b39f98646",
+      "bytes": 38725530,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩重制版/06-摆手拒绝.gif",
+          "family": "社交表情",
+          "use": "水彩表情参考"
+        }
+      ],
+      "width": 960,
+      "height": 960,
+      "frames": 59,
+      "duration_ms": 2950
+    },
+    {
+      "sha256": "244b0b3c3515390d7e4303c0d96d8c5ce24ad97e5c779de90e68fc610f3b5d56",
+      "bytes": 2430220,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capybara-emoji/水彩重制版/六款预览.png",
+          "family": "社交表情",
+          "use": "水彩表情参考"
+        }
+      ],
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "sha256": "455ea0dfaecc89ae82d85545af588ff71b2d58894be5f8e66ee892e5a4d47efe",
+      "bytes": 3539006,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/自然动作修订-三款动态预览.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 768,
+      "height": 256,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "3ebeb11a9ede9628ee3194c1c5e40953142919c30f88c8b75678dee8b749f1b7",
+      "bytes": 4797888,
+      "kind": "animation",
+      "locations": [
+        {
+          "path": "capybara-emoji/重绘日常与热梗步法-六款动态预览.gif",
+          "family": "表情动作",
+          "use": "历史动作版本"
+        }
+      ],
+      "width": 768,
+      "height": 512,
+      "frames": 32,
+      "duration_ms": 1600
+    },
+    {
+      "sha256": "0c2626bf3a28cc67ba7269b9b5090619bdc4df34492aad189e54ffdcdefdf321",
+      "bytes": 723498,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书文档封面/01-Agentic-测试规划与审查.png",
+          "family": "封面",
+          "use": "历史封面版本"
+        }
+      ],
+      "width": 2000,
+      "height": 400
+    },
+    {
+      "sha256": "84c2a15149c3201e4339c858e80ae4f90765a8644bd37c5201b29368132a7f61",
+      "bytes": 786504,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书文档封面/02-项目启动-结伴出发.png",
+          "family": "封面",
+          "use": "历史封面版本"
+        }
+      ],
+      "width": 2000,
+      "height": 400
+    },
+    {
+      "sha256": "a918552ab762f8ce596bdde01473483ec8834d0aa4dcedd702ccc831c3685c43",
+      "bytes": 717698,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书文档封面/03-进展周报-值班台.png",
+          "family": "封面",
+          "use": "历史封面版本"
+        }
+      ],
+      "width": 2000,
+      "height": 400
+    },
+    {
+      "sha256": "24d5f0f7164e081afd7721f36236057e452a2ede786c7d4032468edbb22d26b7",
+      "bytes": 753176,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书文档封面/04-复盘总结-落叶之后.png",
+          "family": "封面",
+          "use": "历史封面版本"
+        }
+      ],
+      "width": 2000,
+      "height": 400
+    },
+    {
+      "sha256": "c192d0b1ac9e93a86428c4c129b6a9cf596e408871a3528bccb3bc7d74391429",
+      "bytes": 772434,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书文档封面/05-团队随笔-温泉小憩.png",
+          "family": "封面",
+          "use": "历史封面版本"
+        }
+      ],
+      "width": 2000,
+      "height": 400
+    },
+    {
+      "sha256": "7ac9f9a0b1d863d4bca73207ce993962e19c29691847c8de05cbb4b2d506b55e",
+      "bytes": 227726,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书文档封面/五款封面速览.jpg",
+          "family": "封面",
+          "use": "历史封面版本"
+        }
+      ],
+      "width": 1280,
+      "height": 1304
+    },
+    {
+      "sha256": "25f07bc7ffd87472a8424692a2550a0d603c24c569ce97f111f350f61ed4d30b",
+      "bytes": 808988,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书封面-重绘版/01-Agentic-测试规划与审查.png",
+          "family": "封面",
+          "use": "历史封面版本"
+        }
+      ],
+      "width": 2000,
+      "height": 400
+    },
+    {
+      "sha256": "324be7d2396294b7edb9ae0f138022e67e922447fa1f120ce37814c8a34da777",
+      "bytes": 567283,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书封面-重绘版/02-项目启动-解开第一根绳.png",
+          "family": "封面",
+          "use": "历史封面版本"
+        }
+      ],
+      "width": 2000,
+      "height": 400
+    },
+    {
+      "sha256": "2c69d77a49f145bf49a42ade1a02e3c56e1bb39e27bb7c6ecc6b7c7705d0b282",
+      "bytes": 677481,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书封面-重绘版/03-进展周报-潮位笔记.png",
+          "family": "封面",
+          "use": "历史封面版本"
+        }
+      ],
+      "width": 2000,
+      "height": 400
+    },
+    {
+      "sha256": "0b0591e5aa0d3f6e9778d3e42d901e0406abf31d4b6c04ff6310bd20d0094aee",
+      "bytes": 629587,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书封面-重绘版/04-项目复盘-把石子排开.png",
+          "family": "封面",
+          "use": "历史封面版本"
+        }
+      ],
+      "width": 2000,
+      "height": 400
+    },
+    {
+      "sha256": "b1e9f5cf6f8b0245c77202f372e1cb6a0b0f5be1722ae44df3ddbd463ba26adb",
+      "bytes": 606533,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书封面-重绘版/05-团队随笔-风停了一会儿.png",
+          "family": "封面",
+          "use": "历史封面版本"
+        }
+      ],
+      "width": 2000,
+      "height": 400
+    },
+    {
+      "sha256": "2bf30b95de43968a045d1d888a317995e84e1129f355bbfe541a34adcf726415",
+      "bytes": 358900,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书封面-重绘版/五款重绘封面速览.jpg",
+          "family": "封面",
+          "use": "历史封面版本"
+        }
+      ],
+      "width": 1280,
+      "height": 1304
+    },
+    {
+      "sha256": "aa4bfd8a6d5b1aefdfde2936b2ecbcaf17398a232215c7986ca3ed2159f9dd57",
+      "bytes": 1272108,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书封面-满幅水彩版/01-Agentic-测试规划与审查.png",
+          "family": "封面",
+          "use": "当前背景参考"
+        }
+      ],
+      "width": 2000,
+      "height": 400
+    },
+    {
+      "sha256": "a595801e340af017dbaea2d9a7bd877cc0012d196233c948db4500179c5815a1",
+      "bytes": 1131556,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书封面-满幅水彩版/02-项目启动-溪岸启程.png",
+          "family": "封面",
+          "use": "当前背景参考"
+        }
+      ],
+      "width": 2000,
+      "height": 400
+    },
+    {
+      "sha256": "34d12b3754ec82ba2e535a659a65f0c9e11d4c92c1874e50e540fba7e8d948c7",
+      "bytes": 1053511,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书封面-满幅水彩版/03-进展周报-栈桥潮位.png",
+          "family": "封面",
+          "use": "当前背景参考"
+        }
+      ],
+      "width": 2000,
+      "height": 400
+    },
+    {
+      "sha256": "09d66760ea2ea42a6834fbc8572f770e8d92dbba1365b51dd815719f2f55b224",
+      "bytes": 1088959,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书封面-满幅水彩版/04-项目复盘-秋岸拾石.png",
+          "family": "封面",
+          "use": "当前背景参考"
+        }
+      ],
+      "width": 2000,
+      "height": 400
+    },
+    {
+      "sha256": "f72c37eb3a5dd21034debc6805b5b46f7cae41540c45af48ae396417afd19277",
+      "bytes": 1078121,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书封面-满幅水彩版/05-团队随笔-柳岸茶歇.png",
+          "family": "封面",
+          "use": "当前背景参考"
+        }
+      ],
+      "width": 2000,
+      "height": 400
+    },
+    {
+      "sha256": "437e09d82c0f064886685083534cb19e472c3356a41f6784ddf328faccc337dd",
+      "bytes": 618386,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "卡卡皮皮-飞书封面-满幅水彩版/五款满幅封面速览.jpg",
+          "family": "封面",
+          "use": "当前背景参考"
+        }
+      ],
+      "width": 1280,
+      "height": 1304
+    },
+    {
+      "sha256": "6f6c44509f8516347d4aec5c3c826bab89281d3aed7e3cfa0cc77c8d71827b52",
+      "bytes": 20688,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capy-skill-trace/assets/crew/kaka.webp",
+          "family": "页面角色",
+          "use": "页面应用实例"
+        }
+      ],
+      "width": 304,
+      "height": 315
+    },
+    {
+      "sha256": "094d5a8bc251fc9258a59f6f985d00ac132fc09058cee6333e4f3987909ae4b1",
+      "bytes": 44374,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capy-skill-trace/assets/crew/patrol.webp",
+          "family": "页面角色",
+          "use": "页面应用实例"
+        }
+      ],
+      "width": 1200,
+      "height": 150
+    },
+    {
+      "sha256": "66ef470b4393dce9a567dbb34e0936ff96763e4ea4f385c70117f441bbe75e9f",
+      "bytes": 25232,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capy-skill-trace/assets/crew/pipi.webp",
+          "family": "页面角色",
+          "use": "页面应用实例"
+        }
+      ],
+      "width": 292,
+      "height": 305
+    },
+    {
+      "sha256": "27cbdfffb4067d9a8a9196e2ef4597c7a7f814f5d1a9f7886e055eb4629279d0",
+      "bytes": 39316,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capy-skill-trace/assets/crew/reply.webp",
+          "family": "页面角色",
+          "use": "页面应用实例"
+        }
+      ],
+      "width": 1200,
+      "height": 150
+    },
+    {
+      "sha256": "02d01d8d6f37fc0fcde740d876c097c59e770f1118b602e0b907b804315c3e77",
+      "bytes": 36228,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capy-skill-trace/assets/crew/stamp.webp",
+          "family": "页面角色",
+          "use": "页面应用实例"
+        }
+      ],
+      "width": 1200,
+      "height": 150
+    },
+    {
+      "sha256": "88fc5e20a6440048f9c5c57631b72a6339a3de3d708d904ee318548925822082",
+      "bytes": 44190,
+      "kind": "image",
+      "locations": [
+        {
+          "path": "capy-skill-trace/assets/crew/switch.webp",
+          "family": "页面角色",
+          "use": "页面应用实例"
+        }
+      ],
+      "width": 1200,
+      "height": 150
+    }
+  ]
+}
