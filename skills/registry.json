@@ -140,6 +140,23 @@
       "created_at": "2026-11-20",
       "updated_at": "2026-11-20",
       "changelog": [{"version": "1.0.0", "date": "2026-11-20", "changes": "首次同步作者本地 Mira 迁移版本；公开副本移除内置 Token，改读 VERCEL_TOKEN，缺少配置时提前退出，并对齐使用说明。"}]
+    },
+    {
+      "name": "capybara",
+      "path": "skills/capybara",
+      "author": "VincentLin94",
+      "description": "维护 Capybara IP 中拟人化卡皮巴拉角色卡卡与皮皮的设定和素材。涉及该 IP 的立绘、头像、表情包、视频、封面、文案、页面形象、属性配置，或明确使用 Capybara 时使用；通用动物知识问答不适用。",
+      "tags": ["character-ip", "capybara", "illustration", "animation", "watercolor"],
+      "version": "1.0.0",
+      "created_at": "2026-11-25",
+      "updated_at": "2026-11-25",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-11-25",
+          "changes": "发布 Capybara IP Skill，明确卡卡与皮皮的拟人化角色定位，集中维护外观、性格、关系、画风与属性；提供压缩参考图、去重原件索引及按需查询脚本。"
+        }
+      ]
     }
   ]
 }

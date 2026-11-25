@@ -1,0 +1,196 @@
+{
+  "ip": {
+    "name": "卡卡与皮皮",
+    "aliases": ["卡卡皮皮", "卡卡和皮皮"],
+    "species": "卡皮巴拉／水豚",
+    "positioning": {
+      "status": "整理设定",
+      "summary": "两个慢悠悠的伙伴，一只把小事看仔细，一只把日子过舒服，一起把事情做好。",
+      "emotional_keywords": ["松弛", "温暖", "认真", "陪伴", "日常的小幽默"],
+      "audience_experience": "看到他们可以缓口气，也愿意把眼前的一件小事做好。"
+    }
+  },
+  "evidence": {
+    "identity": {
+      "status": "已有依据",
+      "sources": [
+        "capybara-emoji/build/capy.js",
+        "capy-skill-trace/assets/crew/kaka.webp",
+        "capy-skill-trace/assets/crew/pipi.webp"
+      ],
+      "finding": "代码和命名胸像一致确定两只角色的头饰、默认眼型与雨靴归属。"
+    },
+    "current_visual_direction": {
+      "status": "采用设定",
+      "sources": [
+        "capybara-emoji/水彩自然动作9款/动作源素材/本次六款动作关键帧.png",
+        "capybara-emoji/水彩自然动作9款/九款预览.png",
+        "卡卡皮皮-飞书封面-满幅水彩版/五款满幅封面速览.jpg"
+      ],
+      "finding": "采用水彩手绘角色、自然连贯动作和满幅溪岸背景，历史画法按任务参考。"
+    },
+    "personality_and_world": {
+      "status": "整理设定",
+      "sources": [
+        "capybara-portraits/index.html",
+        "capybara-portraits-round2/个性签名.txt",
+        "capybara-emoji/水彩自然动作9款/九款预览.png",
+        "卡卡皮皮-飞书封面-满幅水彩版/五款满幅封面速览.jpg"
+      ],
+      "finding": "慢、松弛、茶与日常来自已有作品；两只的性格分工、伙伴关系和世界描述是据此整理的创作默认值，尚无正式人物传记。"
+    }
+  },
+  "shared_morphology": {
+    "status": "拟人化角色为作者明确设定；外观依据现有图像",
+    "character_type": "拟人化卡皮巴拉角色",
+    "body": "棕色毛发、圆润厚实的身体、宽钝口鼻、小圆耳、短四肢、小深色爪；保留水豚轮廓。",
+    "face": "小而有表情的深色眼睛，鼻口简洁，毛发以短排线和水彩层次表现。",
+    "proportions": "采用拟人化的圆胖比例，保留水豚的宽钝口鼻、小圆耳、短肢和厚实躯干；同一组保持一致。两只体量相近，不固定谁更高。",
+    "pose": "以直立、坐卧和短前爪完成生活动作；四足姿态可作为特定动作或场景姿态，角色始终保有人格与情绪表达。",
+    "tail": "以现有参考的短尾或不显露尾部为准。"
+  },
+  "characters": {
+    "kaka": {
+      "name": "卡卡",
+      "visual": {
+        "status": "已有依据",
+        "coat": "较暖的金棕色，浅色口鼻与腹部，深色短爪。",
+        "recognition_anchors": ["大片绿色荷叶", "朱红雨靴", "半睁、斜睨的眼型"],
+        "leaf": "荷叶可顶在头上，也可带长叶柄握持成伞；叶脉清楚，叶片有自然弯曲。",
+        "boots": "雨靴属于卡卡，可穿着或脱在身旁。露出双脚的常规立绘以双靴为准；泡汤或坐卧时按动作脱下或遮挡。",
+        "default_expression": "略认真、略怀疑，嘴角平或微微下压；开心、吃惊和闭眼都可随情境变化。",
+        "palette": "palette.kaka",
+        "standing_reference": "assets/characters/kaka-standing.webp",
+        "bust_reference": "assets/characters/kaka-bust.webp"
+      },
+      "personality": {
+        "status": "整理设定",
+        "core": "认真但不紧绷，外表有点嫌弃，实际很可靠。",
+        "traits": ["善于观察", "愿意动手", "在意小细节", "少言", "有干巴巴的幽默"],
+        "motivation": "把一件小事弄明白、做妥当，再安心歇着。",
+        "weakness": "偶尔较真，容易对离谱的小事投去一个眼神。",
+        "warmth": "常用行动照顾伙伴，例如撑叶伞、解绳、整理石子或收拾桌面。",
+        "range": "可以被逗笑、蹦跳、出糗，也可以安静发呆；认真是底色，不是持续生气。"
+      },
+      "voice": {
+        "status": "创作默认",
+        "tone": "短句，平静，轻微吐槽，随后给出能做的一步。",
+        "samples": [
+          "先看一眼，再下脚。",
+          "行，咱把这一件弄明白。",
+          "叶子够大，慢点儿走。"
+        ]
+      }
+    },
+    "pipi": {
+      "name": "皮皮",
+      "visual": {
+        "status": "已有依据",
+        "coat": "较浅的灰米棕色，柔和的浅色口鼻与腹部，深色短爪。",
+        "recognition_anchors": ["头顶一颗圆圆的黄色柚子", "松弛的眼睛与嘴角"],
+        "yuzu": "小柚子在头顶保持清楚可辨；细梗或小叶随参考处理。手里吃的柚子属于动作道具，可与头顶标记同时出现。",
+        "boots": "常规形象露出自然短爪；可替伙伴擦靴或拿靴，但雨靴不是皮皮的身份标记。",
+        "default_expression": "轻松，眯眼或微笑；受烫、受惊等动作可睁大眼、张口。",
+        "palette": "palette.pipi",
+        "standing_reference": "assets/characters/pipi-standing.webp",
+        "bust_reference": "assets/characters/pipi-bust.webp"
+      },
+      "personality": {
+        "status": "整理设定",
+        "core": "温和松弛，容易从热茶、食物和风景里找到快乐。",
+        "traits": ["亲近伙伴", "享受当下", "有好奇心", "反应直观", "有一点憨趣"],
+        "motivation": "让眼前这段日子舒服一点，也把这份舒服分给伙伴。",
+        "weakness": "舒服时容易犯困，开心时偶尔顾不上一个小细节。",
+        "warmth": "常陪着看、陪着等、递茶或一起收拾，不催促伙伴。",
+        "range": "可以吃惊、被烫、打喷嚏、认真记事；松弛不等于无能或永远睡觉。"
+      },
+      "voice": {
+        "status": "创作默认",
+        "tone": "温和、具体、带一点生活感，邀请一起做一件舒服的小事。",
+        "samples": [
+          "茶还热着，坐会儿。",
+          "等风过去，咱再走。",
+          "这口真香，你也尝尝。"
+        ]
+      }
+    }
+  },
+  "relationship": {
+    "status": "创作默认",
+    "type": "结伴生活、一起做事的伙伴",
+    "dynamic": "卡卡常先观察或动手，皮皮常带来舒缓与小惊喜；两只都能主动做事，也都能出糗。",
+    "interaction": "相互照顾、配合和轻微打趣；矛盾落在具体小事上，用一个动作化解。",
+    "composition": "现有图集常见皮皮在左、卡卡在右；位置可以按构图变化，以头饰和雨靴辨认。",
+    "undefined": ["亲属关系", "恋爱关系", "谁年长", "固定主从关系"]
+  },
+  "world": {
+    "status": "从现有场景归纳",
+    "setting": "有溪水、荷塘、柳岸、小木桥和温泉的日常小世界；场所保持自然、可居住。",
+    "home_scenes": ["溪岸", "荷塘", "木栈桥", "柳树下", "木桶温泉", "有热茶的小桌"],
+    "expanded_scenes": ["面包店", "海边", "列车窗边", "森林灯火", "檐下雨景"],
+    "props": ["荷叶", "柚子", "朱红雨靴", "茶杯", "木桌", "小船", "绳索", "石子", "笔记本", "放大镜"],
+    "story_scale": "一件小事、一个自然变化、一次互相照顾；用具体生活动作表达主题。",
+    "season": "季节、天气和时间可随任务变化，保持柔和光线和可辨认的角色。"
+  },
+  "style": {
+    "primary": {
+      "status": "采用设定",
+      "name": "暖纸水彩手绘",
+      "medium": "暖米色纸本，淡彩水洗，细铅笔或棕色钢笔线，轻微纸纤维和短毛排线。",
+      "character_treatment": "柔软、圆润、有水豚毛感，五官简洁但情绪可读，色块边缘带手绘变化。",
+      "background_treatment": "浅青绿溪水、柔和草木、暖木色与季节色；有空气感与前后层次。",
+      "lighting": "柔和自然光，低至中等对比；夜景用小范围暖光保持温度。",
+      "composition": "动作和空间关系清楚；静态场景留呼吸，宽封面以完整景色铺满画幅。",
+      "references": [
+        "assets/style/watercolor-world.webp",
+        "assets/motion/natural-actions.webp"
+      ]
+    },
+    "variants": {
+      "status": "历史探索，仅在任务指定时采用",
+      "available": ["钢笔淡彩", "田园动画背景", "赛璐璐平涂", "柔和霓虹雨夜", "复古童话"],
+      "references": ["assets/style/historical-styles.webp", "assets/style/historical-scenes.webp"],
+      "instruction": "改变画法时保留两只的识别特征，用媒介、线条、光线和色彩描述风格。历史标题与实际图像不一致时按图像判断。"
+    }
+  },
+  "palette": {
+    "status": "色值来自已有角色代码；不是水彩原图逐像素取色",
+    "source": "capybara-emoji/build/capy.js",
+    "paper": "#f4ecdc",
+    "ink": "#52402f",
+    "kaka": {"body": "#cf9f63", "deep": "#ad7c45", "belly": "#eed9ba", "blush": "#dd957c"},
+    "pipi": {"body": "#cfa87c", "deep": "#b48a5e", "belly": "#efe2cc", "blush": "#e0a086"},
+    "yuzu": {"base": "#f4c344", "deep": "#e0a92e", "leaf": "#6f9e52"},
+    "lotus": {"base": "#86b56e", "deep": "#6c9c57", "vein": "#5b8450"},
+    "boot": {"base": "#d7513c", "deep": "#b03a29"},
+    "wood": {"base": "#9c6b43", "deep": "#83572f"},
+    "water": {"base": "#a7cbd8", "deep": "#7fb0c2"},
+    "heart": {"base": "#ef6f7e", "soft": "#f6a5b0"}
+  },
+  "language": {
+    "status": "源作品有天津口语，采用轻量生活化表达",
+    "default": "简体中文，短而自然，有具体对象与动作。",
+    "dialect": "可少量使用咱、甭、慢点儿等口语；仅在用户指定时强化方言。",
+    "humor": "一本正经的小失误，反应有因果，温和而不嘲弄。",
+    "copy_rule": "成图默认无内嵌文字，文案单独交付；标题或台词由本次任务决定。"
+  },
+  "output_defaults": {
+    "status": "创作默认，可按目标平台调整",
+    "avatar": {"aspect_ratio": "1:1", "framing": "头部或胸像，头饰和表情进入中心裁切安全区"},
+    "standing": {"framing": "全身与头饰完整，道具归属可辨", "background": "暖纸底；任务要求透明时另制透明成品"},
+    "cover": {"width": 2000, "height": 400, "aspect_ratio": "5:1", "background": "满幅场景", "text": "默认无字"},
+    "animation": {"background": "暖纸底或任务指定背景", "loop": "表情包默认自然循环", "motion": "身体动作、头饰和接触道具连贯"},
+    "original_media_metadata": "从 assets/media-catalog.json 取得对应原件的尺寸、帧数与时长；不固定为新资源规格。"
+  },
+  "unset": {
+    "age": null,
+    "gender": null,
+    "birthday": null,
+    "height": null,
+    "birthplace": null,
+    "formal_occupation": null,
+    "official_logo": null,
+    "complete_turnaround": null,
+    "note": "现有素材具备正面立绘、胸像和部分动作角度；未发现完整标准三视图与背面设定。"
+  }
+}
